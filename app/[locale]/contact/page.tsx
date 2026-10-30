@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, use } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -17,8 +17,8 @@ import { getTranslation, Locale, translations } from "@/lib/i18n"
 
 const icons = { Phone, Mail, MessageCircle, MapPin };
 
-export default function ContactPage({ params }: { params: { locale: Locale } }) {
-  const { locale } = params;
+export default function ContactPage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = use(params);
 
   const t = (key: string) => getTranslation(locale, key);
   const contactInfo = translations[locale]?.contactInfoData || [];

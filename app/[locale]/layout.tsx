@@ -21,30 +21,27 @@ const openSans = Open_Sans({
   weight: ["400", "500", "600"],
 })
 
-export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
-  const { locale } = params; // تم حل التحذير هنا
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const { locale } = await params;
   const t = (key: string) => getTranslation(locale, key)
 
   return {
     title: t("companyName"),
     description: t("footerDescription"),
-    // ---===[ تم إضافة هذا الجزء ]===---
     icons: {
-      icon: '/favicon.ico', // المسار إلى الأيقونة
+      icon: '/favicon.ico',
     },
-    // ---=======================---
   }
 }
 
-// ---===[ تم تعديل هذا الجزء لحل التحذير ]===---
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: Locale }
+  params: Promise<{ locale: Locale }>
 }) {
-  const { locale } = params; // تم نقل هذا السطر إلى هنا
+  const { locale } = await params;
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>

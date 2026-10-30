@@ -14,7 +14,8 @@ const values = [
   { titleKey: "valueSustainability", descriptionKey: "valueSustainabilityDesc", icon: Clock },
 ];
 
-export default function AboutPage({ params: { locale } }: { params: { locale: Locale } }) {
+export default async function AboutPage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params;
   const t = (key: string) => getTranslation(locale, key);
 
   return (

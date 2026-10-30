@@ -8,8 +8,8 @@ import { FeaturedProducts } from "@/components/featured-products";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
-// الدالة الآن تستقبل اللغة (locale) من الرابط
-export default function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
+export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params;
   // إنشاء دالة الترجمة `t` بناءً على اللغة الحالية
   const t = (key: string) => getTranslation(locale, key);
 
