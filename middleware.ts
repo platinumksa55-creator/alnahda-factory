@@ -22,8 +22,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // هذا يحدد المسارات التي سيعمل عليها الـ middleware
-  // حاليًا، هو يعمل على كل المسارات ما عدا ملفات النظام والصور
+  // تم استثناء api, admin, uploads, والصور والملفات الثابتة
   matcher: [
-    '/((?!api|_next/static|_next/image|images|videos|favicon.ico).*)',
+    '/((?!api|admin|uploads|_next/static|_next/image|images|videos|favicon.ico).*)',
   ],
 }

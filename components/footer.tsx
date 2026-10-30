@@ -65,10 +65,16 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 mt-8 pt-8 text-center">
-          <p className="font-open-sans text-neutral-400">
+        <div className="border-t border-neutral-800 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between text-neutral-400 text-sm">
+          <p className="font-open-sans">
             © {new Date().getFullYear()} {t("companyName")}. {t("allRightsReserved")}.
           </p>
+          <Link
+            href="/admin"
+            className="text-neutral-500 hover:text-neutral-300 transition-colors mt-2 sm:mt-0 text-xs flex items-center gap-1"
+          >
+            <span>لوحة التحكم (Admin)</span>
+          </Link>
         </div>
       </div>
     </footer>

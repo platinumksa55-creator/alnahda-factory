@@ -1,0 +1,15 @@
+{
+  "username": "admin",
+  "passwordHash": "[object Object]",
+  "salt": "0992b7507f4f6967266560f2676789d2",
+  "siteName": {
+    "ar": "النهضة للمنسوجات",
+    "en": "Al-Nahda for Textiles"
+  },
+  "contactPhone": "+201222422996",
+  "contactEmail": "info@alnahdafactory.com",
+  "contactAddress": {
+    "ar": "المحلة الكبرى - 2 شارع الحلو - طريق دمرو",
+    "en": "EL-Mahalla EL Kobra, 2 AL-Halou St, Damro Road"
+  }
+}

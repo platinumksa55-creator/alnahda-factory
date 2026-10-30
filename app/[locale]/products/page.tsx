@@ -7,21 +7,16 @@ import { ArrowLeft, Filter } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslation, Locale, translations } from "@/lib/i18n";
+import { getAllProducts } from "@/lib/products-store";
 
-export default function ProductsPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // ---===[ جزء التشخيص لمعرفة المشكلة ]===---
-  console.log("===================================");
-  console.log("Debugging Products Page...");
-  console.log("Locale received:", locale);
-  console.log("Is 'ar' data available in translations object?", !!translations.ar);
-  console.log("Is 'en' data available in translations object?", !!translations.en);
-  console.log("Data for current locale:", translations[locale]);
-  console.log("===================================");
-  // ---===[ نهاية جزء التشخيص ]===---
+export const dynamic = "force-dynamic";
 
+export default async function ProductsPage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params;
   const t = (key: string) => getTranslation(locale, key);
   const productCategories = translations[locale]?.productCategories || [];
-  const allProducts = translations[locale]?.allProductsData || [];
+  const dynamicProducts = getAllProducts(locale);
+  const allProducts = dynamicProducts.length > 0 ? dynamicProducts : (translations[locale]?.allProductsData || []);
 
   const getCategoryName = (categoryId: string) => {
     const category = productCategories.find(cat => cat.name === categoryId);

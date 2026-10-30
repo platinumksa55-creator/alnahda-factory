@@ -8,29 +8,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslation, Locale, translations } from "@/lib/i18n";
+import { getProductBySlug, getAllProducts } from "@/lib/products-store";
 import type { Metadata } from "next";
 
+export const dynamicParams = true;
+
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
     locale: Locale;
-  };
+  }>;
 }
 
-// Generate static params for all products in all locales
+// Generate static params for initial products
 export async function generateStaticParams() {
-  const allProductsAR = translations.ar.allProductsData || [];
-  const allProductsEN = translations.en.allProductsData || [];
+  const allProducts = getAllProducts();
   const params = [
-    ...allProductsAR.map((p) => ({ slug: p.slug, locale: "ar" })),
-    ...allProductsEN.map((p) => ({ slug: p.slug, locale: "en" })),
+    ...allProducts.map((p) => ({ slug: p.slug, locale: "ar" })),
+    ...allProducts.map((p) => ({ slug: p.slug, locale: "en" })),
   ];
   return params;
 }
 
 // Generate dynamic metadata for SEO
-export async function generateMetadata({ params: { slug, locale } }: ProductPageProps): Promise<Metadata> {
-  const product = translations[locale]?.allProductsData?.find((p) => p.slug === slug);
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const product = getProductBySlug(slug, locale) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
   const t = (key: string) => getTranslation(locale, key);
 
   if (!product) {
@@ -43,10 +46,12 @@ export async function generateMetadata({ params: { slug, locale } }: ProductPage
   };
 }
 
-export default function ProductDetailPage({ params: { slug, locale } }: ProductPageProps) {
+export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { slug, locale } = await params;
   const t = (key: string) => getTranslation(locale, key);
-  const allProducts = translations[locale]?.allProductsData || [];
-  const product = allProducts.find((p) => p.slug === slug);
+  
+  const allProducts = getAllProducts(locale);
+  const product = getProductBySlug(slug, locale) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
 
   if (!product) {
     notFound();

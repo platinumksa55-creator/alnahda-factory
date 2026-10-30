@@ -3,8 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-// 1. استيراد كائن الترجمة الرئيسي
+// 1. استيراد كائن الترجمة الرئيسي ومكتبة المنتجات
 import { getTranslation, Locale, translations } from "@/lib/i18n";
+import { getFeaturedProducts } from "@/lib/products-store";
 
 export function FeaturedProducts({
   locale,
@@ -21,8 +22,11 @@ export function FeaturedProducts({
 }) {
   const t = (key: string) => getTranslation(locale, key);
 
-  // 2. تم حذف القائمة القديمة، والآن يتم جلب أول 3 منتجات من البيانات الرئيسية
-  const featuredProducts = translations[locale]?.allProductsData.slice(0, 3) || [];
+  // يتم جلب المنتجات المميزة من قاعدة البيانات، مع الرجوع للبيانات الافتراضية كاحتياط
+  const dynamicFeatured = getFeaturedProducts(locale);
+  const featuredProducts = dynamicFeatured.length > 0
+    ? dynamicFeatured
+    : (translations[locale]?.allProductsData.slice(0, 3) || []);
 
   return (
     <section className="py-16 bg-neutral-50">

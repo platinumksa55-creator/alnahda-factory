@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "../globals.css"
 import { Locale, getTranslation } from "@/lib/i18n" 
+import { VisitorTracker } from "@/components/visitor-tracker" 
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body
         className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${workSans.variable} ${openSans.variable} antialiased`}
       >
+        <VisitorTracker />
         {children}
       </body>
     </html>

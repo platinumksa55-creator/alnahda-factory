@@ -1,0 +1,598 @@
+import fs from 'fs';
+import path from 'path';
+import crypto from 'crypto';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '..');
+const dataDir = path.join(rootDir, 'data');
+
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+// 1. Password hashing for default admin: username=admin, password=admin123
+const salt = crypto.randomBytes(16).toString('hex');
+const passwordHash = crypto.createHash('sha256').update('admin123' + salt).toString('hex');
+
+const adminConfig = {
+  username: 'admin',
+  passwordHash,
+  salt,
+  siteName: {
+    ar: 'النهضة للمنسوجات',
+    en: 'Al-Nahda for Textiles'
+  },
+  contactPhone: '+201222422996',
+  contactEmail: 'info@alnahdafactory.com',
+  contactAddress: {
+    ar: 'المحلة الكبرى - 2 شارع الحلو - طريق دمرو',
+    en: 'EL-Mahalla EL Kobra, 2 AL-Halou St, Damro Road'
+  }
+};
+
+const adminConfigPath = path.join(dataDir, 'admin-config.json');
+if (!fs.existsSync(adminConfigPath)) {
+  fs.writeFileSync(adminConfigPath, JSON.stringify(adminConfig, null, 2), 'utf-8');
+  console.log('Created admin-config.json');
+}
+
+// 2. Initial Products Data (combining Arabic and English from translations)
+const initialProducts = [
+  {
+    id: 1,
+    slug: "luxury-white-cotton",
+    name: {
+      ar: "قماش قطن أبيض فاخر",
+      en: "Luxury White Cotton Fabric"
+    },
+    description: {
+      ar: "قماش قطن طبيعي 100% فائق الجودة، مثالي للملابس الراقية.",
+      en: "Premium 100% natural cotton fabric with a soft, breathable texture—ideal for elegant apparel and fine textiles."
+    },
+    longDescription: {
+      ar: "يتميز هذا القماش القطني الفاخر بنعومته الاستثنائية وجودته العالية. مصنوع من أجود أنواع القطن، يوفر راحة لا مثيل لها.",
+      en: "This luxury cotton fabric features exceptional softness and high quality. Made from the finest cotton, it provides unparalleled comfort."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.8,
+    reviews: 24,
+    price: "حسب الكمية والمواصفات",
+    images: [
+      "/images/luxury-cotton-fabric.png",
+      "/images/luxury-cotton-fabric-2.png",
+      "/images/luxury-cotton-fabric-3.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن طبيعي",
+        "الوزن": "180 جم/متر مربع",
+        "العرض": "150 سم"
+      },
+      en: {
+        "Material": "100% Natural Cotton",
+        "Weight": "180 g/m²"
+      }
+    },
+    features: {
+      ar: ["100% قطن طبيعي", "نعومة فائقة", "مقاوم للتجعد"],
+      en: ["100% Natural Cotton", "Ultra Soft", "Wrinkle Resistant"]
+    },
+    applications: {
+      ar: ["الملابس الراقية", "الفراش", "ملابس الأطفال"],
+      en: ["Fine Apparel", "Bedding", "Children's Wear"]
+    },
+    featured: true,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 2,
+    slug: "beige-cotton-towels",
+    name: {
+      ar: "مناشف قطنية بلون بيج",
+      en: "Beige Cotton Towels"
+    },
+    description: {
+      ar: "مناشف عالية الامتصاص مصنوعة من القطن الطبيعي، توفر المتانة والراحة للاستخدام اليومي.",
+      en: "High-absorbency towels made from natural beige cotton, offering durability and comfort for everyday use."
+    },
+    longDescription: {
+      ar: "مناشف قطنية متينة وعملية، مصممة لتحمل الاستخدام المتكرر مع الحفاظ على نعومتها وقدرتها العالية على الامتصاص.",
+      en: "Durable and practical cotton towels, designed to withstand frequent use while maintaining their softness and high absorbency."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.7,
+    reviews: 18,
+    price: "حسب الكمية والمقاس",
+    images: [
+      "/images/beige-towel-stack.png",
+      "/images/beige-towel-closeup.png",
+      "/images/beige-towel-in-use.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن",
+        "المقاسات": "متوفرة بمقاسات مختلفة"
+      },
+      en: {
+        "Material": "100% Cotton",
+        "Sizes": "Various sizes available"
+      }
+    },
+    features: {
+      ar: ["قدرة امتصاص عالية", "متانة للاستخدام اليومي", "ملمس ناعم"],
+      en: ["High Absorbency", "Durable for Daily Use", "Soft Texture"]
+    },
+    applications: {
+      ar: ["الاستخدام المنزلي", "الفنادق والمنتجعات", "النوادي الصحية"],
+      en: ["Home Use", "Hotels & Resorts", "Health Clubs"]
+    },
+    featured: true,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 3,
+    slug: "cotton-bornooses",
+    name: {
+      ar: "برانس قطنية فاخرة",
+      en: "Cotton Bornooses"
+    },
+    description: {
+      ar: "برانس قطنية فاخرة للرجال والنساء، توفر نعومة طبيعية ودفء وراحة للمنزل.",
+      en: "Luxury cotton bornooses for men and women, providing natural softness, warmth, and comfort for home and leisure."
+    },
+    longDescription: {
+      ar: "استمتع بالراحة الفائقة مع برانس مصنوعة من القطن الصافي، مثالية بعد الاستحمام أو للاسترخاء في المنزل.",
+      en: "Enjoy superior comfort with our pure cotton bornooses, perfect for after a bath or for relaxing at home."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.9,
+    reviews: 32,
+    price: "حسب المقاس والكمية",
+    images: [
+      "/images/cotton-bornoos-white.png",
+      "/images/cotton-bornoos-detail.png",
+      "/images/cotton-bornoos-on-model.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن تيري",
+        "الأحجام": "S, M, L, XL, XXL"
+      },
+      en: {
+        "Material": "100% Terry Cotton",
+        "Sizes": "S, M, L, XL, XXL"
+      }
+    },
+    features: {
+      ar: ["نعومة وراحة", "تصميم أنيق", "امتصاص عالي"],
+      en: ["Softness and Comfort", "Elegant Design", "High Absorbency"]
+    },
+    applications: {
+      ar: ["ملابس منزلية", "روب استحمام", "هدايا فاخرة"],
+      en: ["Loungewear", "Bathrobe", "Luxury Gifts"]
+    },
+    featured: true,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 4,
+    slug: "small-cotton-towels",
+    name: {
+      ar: "مناشف قطنية صغيرة فاخرة",
+      en: "Luxury Small Cotton Towels"
+    },
+    description: {
+      ar: "مناشف قطنية صغيرة وعملية، مثالية للاستخدامات المتعددة مثل مناشف اليد أو الوجه.",
+      en: "Practical and compact luxury cotton towels, perfect for multiple uses like hand towels, face cloths, or guest towels."
+    },
+    longDescription: {
+      ar: "مجموعة من المناشف الصغيرة المصنوعة من القطن عالي الجودة لضمان الامتصاص والنعومة. حجمها مثالي يجعلها متعددة الاستخدامات وعملية.",
+      en: "A set of small towels made from high-quality cotton to ensure absorbency and softness. Their perfect size makes them versatile and practical."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.5,
+    reviews: 45,
+    price: "حسب الكمية",
+    images: [
+      "/images/small-towel-set.png",
+      "/images/small-towel-folded.png",
+      "/images/small-towel-bathroom.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن",
+        "المقاسات": "30x30 سم, 50x30 سم"
+      },
+      en: {
+        "Material": "100% Cotton",
+        "Sizes": "30x30 cm, 50x30 cm"
+      }
+    },
+    features: {
+      ar: ["حجم عملي", "متعددة الاستخدامات", "نعومة فائقة"],
+      en: ["Practical Size", "Multi-purpose", "Ultra Soft"]
+    },
+    applications: {
+      ar: ["مناشف للضيوف", "مناشف اليد والوجه", "المطابخ"],
+      en: ["Guest towels", "Hand and face towels", "Kitchens"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 5,
+    slug: "luxury-cotton-bed-sheets",
+    name: {
+      ar: "أطقم ملاءات سرير قطنية فاخرة",
+      en: "Luxury Cotton Bed Sheets"
+    },
+    description: {
+      ar: "طقم ملاءات سرير أنيق مصنوع من القطن الطبيعي 100%، مصمم للراحة والجودة طويلة الأمد.",
+      en: "Elegant bed sheet set made of 100% natural cotton, designed for comfort, breathability, and long-lasting quality."
+    },
+    longDescription: {
+      ar: "جدد غرفة نومك مع أطقم الملاءات الفاخرة التي توفر نومًا هانئًا بفضل جودة القطن الطبيعي وقدرته على التنفس.",
+      en: "Refresh your bedroom with our luxury bed sheet sets that provide a restful sleep thanks to the quality of natural, breathable cotton."
+    },
+    category: {
+      ar: "أقمشة الديكور",
+      en: "Decor Fabrics"
+    },
+    categoryId: "home-decor",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.8,
+    reviews: 29,
+    price: "حسب المقاس",
+    images: [
+      "/images/bed-sheets-set.png",
+      "/images/bed-sheets-closeup.png",
+      "/images/bed-sheets-on-bed.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن ساتين",
+        "المقاسات": "مفرد، مزدوج، كينج"
+      },
+      en: {
+        "Material": "100% Sateen Cotton",
+        "Sizes": "Single, Double, King"
+      }
+    },
+    features: {
+      ar: ["ملمس ناعم وحريري", "تهوية عالية", "جودة تدوم طويلاً"],
+      en: ["Soft and Silky Feel", "High Breathability", "Long-lasting Quality"]
+    },
+    applications: {
+      ar: ["غرف النوم الرئيسية", "أجنحة الفنادق الفاخرة", "هدايا الزفاف"],
+      en: ["Master Bedrooms", "Luxury Hotel Suites", "Wedding Gifts"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 6,
+    slug: "technical-cotton-fabric",
+    name: {
+      ar: "أقمشة قطنية تقنية",
+      en: "Technical Cotton Fabric"
+    },
+    description: {
+      ar: "قماش قطني متخصص للاستخدامات التقنية والصناعية، يجمع بين المرونة والنعومة الطبيعية.",
+      en: "Specialized cotton fabric for technical and industrial uses, combining resilience with natural softness."
+    },
+    longDescription: {
+      ar: "نقدم أقمشة قطنية معالجة بتقنيات خاصة لتلبية متطلبات محددة مثل مقاومة الماء أو اللهب، مع الحفاظ على خصائص القطن الطبيعية.",
+      en: "We offer cotton fabrics treated with special technologies to meet specific requirements such as water or flame resistance, while maintaining the natural properties of cotton."
+    },
+    category: {
+      ar: "منسوجات صناعية",
+      en: "Industrial Textiles"
+    },
+    categoryId: "industrial",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.9,
+    reviews: 15,
+    price: "حسب المواصفات الفنية",
+    images: [
+      "/images/technical-fabric-roll.png",
+      "/images/technical-fabric-closeup.png",
+      "/images/technical-fabric-application.png"
+    ],
+    specifications: {
+      ar: {
+        "المعالجة": "مقاومة للماء أو اللهب (حسب الطلب)",
+        "المادة": "100% قطن"
+      },
+      en: {
+        "Treatment": "Water or Flame Resistant (on-demand)",
+        "Material": "100% Cotton"
+      }
+    },
+    features: {
+      ar: ["معالجة خاصة", "متانة عالية", "نعومة طبيعية"],
+      en: ["Special Treatment", "High Durability", "Natural Softness"]
+    },
+    applications: {
+      ar: ["ملابس العمل الواقية", "المنسوجات الطبية", "الفلاتر الصناعية"],
+      en: ["Protective Workwear", "Medical Textiles", "Industrial Filters"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 7,
+    slug: "organic-natural-cotton",
+    name: {
+      ar: "قطن طبيعي عضوي (صديق للبيئة)",
+      en: "Organic Natural Cotton Fabric"
+    },
+    description: {
+      ar: "قماش قطني عضوي نقي، مزروع بدون كيماويات. مثالي للبشرة الحساسة ومنتجات الأطفال.",
+      en: "Eco-friendly, chemical-free organic cotton fabric—gentle on skin and sustainably produced for premium quality textiles."
+    },
+    longDescription: {
+      ar: "قطن مزروع بدون مبيدات أو مواد كيميائية ضارة. مثالي لملابس الأطفال والمنتجات التي تلامس البشرة مباشرة.",
+      en: "Cotton grown without harmful pesticides or chemicals. Perfect for baby clothes and products that come into direct contact with the skin."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.9,
+    reviews: 38,
+    price: "حسب الكمية",
+    images: [
+      "/images/organic-cotton-bale.png",
+      "/images/organic-cotton-fabric.png",
+      "/images/organic-cotton-shirt.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن عضوي معتمد",
+        "الوزن": "160 جم/متر مربع"
+      },
+      en: {
+        "Material": "100% Certified Organic Cotton",
+        "Weight": "160 g/m²"
+      }
+    },
+    features: {
+      ar: ["عضوي معتمد", "خالي من الكيماويات", "صحي وآمن"],
+      en: ["Certified Organic", "Chemical-Free", "Healthy and Safe"]
+    },
+    applications: {
+      ar: ["ملابس الأطفال", "الأزياء العضوية", "مفارش الأطفال"],
+      en: ["Children's Apparel", "Organic Fashion", "Baby Bedding"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 8,
+    slug: "naturally-dyed-cotton-towels",
+    name: {
+      ar: "مناشف القطن المصبوغ طبيعياً",
+      en: "Naturally Dyed Cotton Towels"
+    },
+    description: {
+      ar: "مناشف ناعمة مصبوغة بألوان مستخرجة من مصادر نباتية طبيعية، صديقة للبيئة.",
+      en: "Pure cotton towels naturally dyed in earthy tones, combining eco-conscious design with softness and absorbency."
+    },
+    longDescription: {
+      ar: "يتم استخدام أصباغ مستخرجة من النباتات والمعادن الطبيعية لصبغ هذا الكتان، مما يجعله خيارًا مستدامًا وجميلًا.",
+      en: "Dyes extracted from natural plants and minerals are used to color this linen, making it a beautiful and sustainable choice."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.8,
+    reviews: 22,
+    price: "حسب الكمية",
+    images: [
+      "/images/natural-dye-towels.png",
+      "/images/natural-dye-colors.png",
+      "/images/natural-dye-process.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن",
+        "الصبغة": "طبيعية"
+      },
+      en: {
+        "Material": "100% Cotton",
+        "Dye": "Natural"
+      }
+    },
+    features: {
+      ar: ["صبغات طبيعية", "ألوان ثابتة", "صديق للبيئة"],
+      en: ["Natural Dyes", "Colorfast", "Eco-Friendly"]
+    },
+    applications: {
+      ar: ["الفنادق البيئية", "الاستخدام المنزلي الراقي", "مراكز السبا"],
+      en: ["Eco-Hotels", "Luxury Home Use", "Spa Centers"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: 9,
+    slug: "ihram-clothing-for-muslims",
+    name: {
+      ar: "ملابس إحرام قطنية",
+      en: "Cotton Ihram Clothing"
+    },
+    description: {
+      ar: "ملابس إحرام مريحة مصنوعة من قطن عالي الجودة لضمان الراحة التامة أثناء أداء مناسك الحج والعمرة.",
+      en: "Comfortable Ihram clothing made from high-quality cotton to ensure complete comfort during Hajj and Umrah rituals."
+    },
+    longDescription: {
+      ar: "طقم إحرام للرجال مكون من قطعتين غير مخيطتين، مصنوع من قطن 100% عالي الامتصاص ومريح للبشرة.",
+      en: "A two-piece, unstitched Ihram set for men, made from 100% high-absorbency cotton that is comfortable on the skin."
+    },
+    category: {
+      ar: "أقمشة القطن",
+      en: "Cotton Fabrics"
+    },
+    categoryId: "cotton",
+    availability: {
+      ar: "متوفر",
+      en: "Available"
+    },
+    rating: 4.9,
+    reviews: 41,
+    price: "حسب الكمية والوزن",
+    images: [
+      "/images/ihram-clothing-folded.png",
+      "/images/ihram-clothing-on-model.png",
+      "/images/ihram-clothing-texture.png"
+    ],
+    specifications: {
+      ar: {
+        "المادة": "100% قطن",
+        "المقاس": "مقاس موحد"
+      },
+      en: {
+        "Material": "100% Cotton",
+        "Size": "One size fits all"
+      }
+    },
+    features: {
+      ar: ["قطن عالي الامتصاص", "مريح للبشرة", "بدون خياطة"],
+      en: ["High-Absorbency Cotton", "Comfortable on Skin", "Unstitched"]
+    },
+    applications: {
+      ar: ["مناسك الحج", "مناسك العمرة"],
+      en: ["Hajj Rituals", "Umrah Rituals"]
+    },
+    featured: false,
+    createdAt: new Date().toISOString()
+  }
+];
+
+const productsPath = path.join(dataDir, 'products.json');
+if (!fs.existsSync(productsPath)) {
+  fs.writeFileSync(productsPath, JSON.stringify(initialProducts, null, 2), 'utf-8');
+  console.log('Created products.json with 9 products');
+}
+
+// 3. Initial Analytics Data with sample realistic initial activity
+const today = new Date().toISOString().split('T')[0];
+const initialAnalytics = {
+  totalVisits: 142,
+  uniqueVisitorsCount: 89,
+  visitors: {},
+  daily: {
+    [today]: {
+      total: 18,
+      unique: 12,
+      pages: {
+        "/ar": 10,
+        "/ar/products": 5,
+        "/ar/contact": 3
+      }
+    }
+  },
+  pageViews: {
+    "/ar": 76,
+    "/ar/products": 38,
+    "/ar/contact": 15,
+    "/ar/about": 13
+  },
+  devices: {
+    desktop: 58,
+    mobile: 74,
+    tablet: 10,
+    other: 0
+  },
+  browsers: {
+    "Chrome": 85,
+    "Safari": 32,
+    "Firefox": 14,
+    "Edge": 11
+  },
+  recentVisits: [
+    {
+      id: "v-init-1",
+      timestamp: new Date().toISOString(),
+      visitorId: "vis-demo-1",
+      path: "/ar",
+      referrer: "Direct",
+      userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0",
+      device: "desktop",
+      browser: "Chrome",
+      os: "Windows",
+      ip: "156.204.12.44"
+    },
+    {
+      id: "v-init-2",
+      timestamp: new Date(Date.now() - 3600000).toISOString(),
+      visitorId: "vis-demo-2",
+      path: "/ar/products",
+      referrer: "Google",
+      userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)",
+      device: "mobile",
+      browser: "Safari",
+      os: "iOS",
+      ip: "197.34.88.21"
+    }
+  ]
+};
+
+const analyticsPath = path.join(dataDir, 'analytics.json');
+if (!fs.existsSync(analyticsPath)) {
+  fs.writeFileSync(analyticsPath, JSON.stringify(initialAnalytics, null, 2), 'utf-8');
+  console.log('Created analytics.json with initial stats');
+}
+
+console.log('Data initialization complete!');
