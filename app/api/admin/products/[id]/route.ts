@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getProductById, createOrUpdateProduct, deleteProduct } from '@/lib/products-store';
 import { isAuthenticatedRequest } from '@/lib/admin-auth';
 
@@ -39,6 +40,7 @@ export async function PUT(
       id: numId,
     });
 
+    revalidatePath('/', 'layout');
     return NextResponse.json({ success: true, product: updated });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
@@ -62,6 +64,7 @@ export async function DELETE(
       return NextResponse.json({ success: false, error: 'تعذر حذف الموديل أو الموديل غير موجود' }, { status: 404 });
     }
 
+    revalidatePath('/', 'layout');
     return NextResponse.json({ success: true, message: 'تم حذف الموديل بنجاح' });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

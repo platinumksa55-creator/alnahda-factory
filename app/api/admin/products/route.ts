@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getRawProducts, createOrUpdateProduct } from '@/lib/products-store';
 import { isAuthenticatedRequest } from '@/lib/admin-auth';
 
@@ -25,6 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     const created = createOrUpdateProduct(body);
+    revalidatePath('/', 'layout');
     return NextResponse.json({ success: true, product: created });
   } catch (error: any) {
     console.error('Error creating product:', error);

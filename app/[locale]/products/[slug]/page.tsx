@@ -11,6 +11,7 @@ import { getTranslation, Locale, translations } from "@/lib/i18n";
 import { getProductBySlug, getAllProducts } from "@/lib/products-store";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 
 interface ProductPageProps {
@@ -18,16 +19,6 @@ interface ProductPageProps {
     slug: string;
     locale: Locale;
   }>;
-}
-
-// Generate static params for initial products
-export async function generateStaticParams() {
-  const allProducts = getAllProducts();
-  const params = [
-    ...allProducts.map((p) => ({ slug: p.slug, locale: "ar" })),
-    ...allProducts.map((p) => ({ slug: p.slug, locale: "en" })),
-  ];
-  return params;
 }
 
 // Generate dynamic metadata for SEO

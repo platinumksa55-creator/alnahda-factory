@@ -1,5 +1,7 @@
 import { getTranslation, Locale } from "@/lib/i18n";
 
+export const dynamic = "force-dynamic";
+
 // استيراد جميع المكونات التي تحتاجها صفحتك
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";

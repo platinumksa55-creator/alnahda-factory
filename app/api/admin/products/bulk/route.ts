@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { bulkImportProducts } from '@/lib/products-store';
 import { isAuthenticatedRequest } from '@/lib/admin-auth';
 import * as XLSX from 'xlsx';
@@ -332,6 +333,7 @@ export async function POST(req: NextRequest) {
         }
 
         const result = bulkImportProducts(parsedProducts);
+        revalidatePath('/', 'layout');
         return NextResponse.json({
           success: true,
           addedCount: result.addedCount,
@@ -365,6 +367,7 @@ export async function POST(req: NextRequest) {
     }
 
     const result = bulkImportProducts(parsedProducts);
+    revalidatePath('/', 'layout');
     return NextResponse.json({
       success: true,
       addedCount: result.addedCount,
