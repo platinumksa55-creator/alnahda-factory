@@ -15,6 +15,7 @@ import {
   ArrowUpRight,
   TrendingUp,
   Compass,
+  Trash2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -39,6 +40,22 @@ export function AnalyticsView({ stats }: AnalyticsViewProps) {
     }, 600);
   };
 
+  const handleResetAnalytics = async () => {
+    if (!window.confirm("هل أنت متأكد من تصفير جميع إحصائيات الزوار والبدء من الصفر؟")) return;
+    setRefreshing(true);
+    try {
+      const res = await fetch("/api/analytics/stats", { method: "DELETE" });
+      if (res.ok) {
+        toast.success("تم تصفير عداد الزوار والبدء بتسجيل الزيارات الفعلية فقط!");
+        router.refresh();
+      }
+    } catch {
+      toast.error("حدث خطأ أثناء تصفير الإحصائيات");
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
   const totalDeviceViews =
     stats.devices.desktop + stats.devices.mobile + stats.devices.tablet || 1;
   const mobilePercent = Math.round((stats.devices.mobile / totalDeviceViews) * 100);
@@ -56,15 +73,27 @@ export function AnalyticsView({ stats }: AnalyticsViewProps) {
           </p>
         </div>
 
-        <Button
-          onClick={handleRefresh}
-          disabled={refreshing}
-          variant="outline"
-          className="text-xs sm:text-sm gap-2 bg-slate-50 hover:bg-slate-100"
-        >
-          <RefreshCw className={`w-4 h-4 ${refreshing ? "animate-spin text-primary" : "text-slate-600"}`} />
-          <span>تحديث الإحصائيات الآن</span>
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button
+            onClick={handleResetAnalytics}
+            disabled={refreshing}
+            variant="outline"
+            className="text-xs sm:text-sm gap-1.5 text-red-600 border-red-200 hover:bg-red-50"
+          >
+            <Trash2 className="w-4 h-4" />
+            <span>تصفير العداد</span>
+          </Button>
+
+          <Button
+            onClick={handleRefresh}
+            disabled={refreshing}
+            variant="outline"
+            className="text-xs sm:text-sm gap-2 bg-slate-50 hover:bg-slate-100"
+          >
+            <RefreshCw className={`w-4 h-4 ${refreshing ? "animate-spin text-primary" : "text-slate-600"}`} />
+            <span>تحديث الإحصائيات الآن</span>
+          </Button>
+        </div>
       </div>
 
       {/* 4 Metric Cards */}

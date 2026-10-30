@@ -1,8 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import { AnalyticsData, VisitRecord } from './types';
+import { readStoreFile, writeStoreFile } from './storage';
 
-const analyticsFilePath = path.join(process.cwd(), 'data', 'analytics.json');
+const ANALYTICS_FILE = 'analytics.json';
 
 const defaultAnalytics: AnalyticsData = {
   totalVisits: 0,
@@ -16,30 +15,26 @@ const defaultAnalytics: AnalyticsData = {
 };
 
 export function getRawAnalytics(): AnalyticsData {
-  try {
-    if (!fs.existsSync(analyticsFilePath)) {
-      return defaultAnalytics;
-    }
-    const content = fs.readFileSync(analyticsFilePath, 'utf-8');
-    return JSON.parse(content) as AnalyticsData;
-  } catch (error) {
-    console.error('Error reading analytics file:', error);
-    return defaultAnalytics;
-  }
+  return readStoreFile<AnalyticsData>(ANALYTICS_FILE, defaultAnalytics);
 }
 
 export function saveRawAnalytics(data: AnalyticsData): boolean {
-  try {
-    const dir = path.dirname(analyticsFilePath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(analyticsFilePath, JSON.stringify(data, null, 2), 'utf-8');
-    return true;
-  } catch (error) {
-    console.error('Error saving analytics file:', error);
-    return false;
-  }
+  return writeStoreFile<AnalyticsData>(ANALYTICS_FILE, data);
+}
+
+export function resetAnalytics(): AnalyticsData {
+  const empty: AnalyticsData = {
+    totalVisits: 0,
+    uniqueVisitorsCount: 0,
+    visitors: {},
+    daily: {},
+    pageViews: {},
+    devices: { desktop: 0, mobile: 0, tablet: 0, other: 0 },
+    browsers: {},
+    recentVisits: [],
+  };
+  saveRawAnalytics(empty);
+  return empty;
 }
 
 // User-Agent detection helper

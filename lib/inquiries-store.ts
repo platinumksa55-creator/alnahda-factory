@@ -1,36 +1,14 @@
-import fs from 'fs';
-import path from 'path';
 import { ContactInquiry } from './types';
+import { readStoreFile, writeStoreFile } from './storage';
 
-const inquiriesFilePath = path.join(process.cwd(), 'data', 'inquiries.json');
+const INQUIRIES_FILE = 'inquiries.json';
 
 export function getInquiries(): ContactInquiry[] {
-  try {
-    if (!fs.existsSync(inquiriesFilePath)) {
-      const initial: ContactInquiry[] = [];
-      saveInquiries(initial);
-      return initial;
-    }
-    const content = fs.readFileSync(inquiriesFilePath, 'utf-8');
-    return JSON.parse(content) as ContactInquiry[];
-  } catch (error) {
-    console.error('Error reading inquiries file:', error);
-    return [];
-  }
+  return readStoreFile<ContactInquiry[]>(INQUIRIES_FILE, []);
 }
 
 export function saveInquiries(inquiries: ContactInquiry[]): boolean {
-  try {
-    const dir = path.dirname(inquiriesFilePath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(inquiriesFilePath, JSON.stringify(inquiries, null, 2), 'utf-8');
-    return true;
-  } catch (error) {
-    console.error('Error saving inquiries file:', error);
-    return false;
-  }
+  return writeStoreFile<ContactInquiry[]>(INQUIRIES_FILE, inquiries);
 }
 
 export function addInquiry(data: {

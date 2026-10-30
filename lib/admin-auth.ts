@@ -1,28 +1,17 @@
-import fs from 'fs';
-import path from 'path';
 import crypto from 'crypto';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 import { AdminConfig } from './types';
+import { readStoreFile, writeStoreFile } from './storage';
 
-const configFilePath = path.join(process.cwd(), 'data', 'admin-config.json');
+const CONFIG_FILE = 'admin-config.json';
 const SESSION_COOKIE_NAME = 'alnahda_admin_token';
 const SECRET_KEY = process.env.ADMIN_SESSION_SECRET || 'alnahda-textile-factory-secret-key-2025';
 
 export function getAdminConfig(): AdminConfig {
-  try {
-    if (fs.existsSync(configFilePath)) {
-      const content = fs.readFileSync(configFilePath, 'utf-8');
-      return JSON.parse(content);
-    }
-  } catch (e) {
-    console.error('Error reading admin config:', e);
-  }
-
-  // Fallback defaults
   const salt = 'default-salt-alnahda';
   const passwordHash = crypto.createHash('sha256').update('admin123' + salt).toString('hex');
-  return {
+  const fallback: AdminConfig = {
     username: 'admin',
     passwordHash,
     salt,
@@ -34,18 +23,11 @@ export function getAdminConfig(): AdminConfig {
       en: 'EL-Mahalla EL Kobra, 2 AL-Halou St, Damro Road'
     }
   };
+  return readStoreFile<AdminConfig>(CONFIG_FILE, fallback);
 }
 
 export function saveAdminConfig(config: AdminConfig): boolean {
-  try {
-    const dir = path.dirname(configFilePath);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(configFilePath, JSON.stringify(config, null, 2), 'utf-8');
-    return true;
-  } catch (e) {
-    console.error('Error saving admin config:', e);
-    return false;
-  }
+  return writeStoreFile<AdminConfig>(CONFIG_FILE, config);
 }
 
 export function verifyAdminCredentials(username: string, password: string):boolean {
