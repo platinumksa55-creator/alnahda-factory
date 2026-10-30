@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function AdminSettingsPage() {
-  const config = getAdminConfig();
+  const config = await getAdminConfig();
 
   return (
     <SettingsManager

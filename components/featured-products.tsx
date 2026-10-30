@@ -7,7 +7,7 @@ import Image from "next/image";
 import { getTranslation, Locale, translations } from "@/lib/i18n";
 import { getFeaturedProducts } from "@/lib/products-store";
 
-export function FeaturedProducts({
+export async function FeaturedProducts({
   locale,
   title,
   subtitle,
@@ -23,7 +23,7 @@ export function FeaturedProducts({
   const t = (key: string) => getTranslation(locale, key);
 
   // يتم جلب المنتجات المميزة من قاعدة البيانات، مع الرجوع للبيانات الافتراضية كاحتياط
-  const dynamicFeatured = getFeaturedProducts(locale);
+  const dynamicFeatured = await getFeaturedProducts(locale);
   const featuredProducts = dynamicFeatured.length > 0
     ? dynamicFeatured
     : (translations[locale]?.allProductsData.slice(0, 3) || []);

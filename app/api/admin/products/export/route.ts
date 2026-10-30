@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
         },
       ];
     } else {
-      const products = getRawProducts();
+      const products = await getRawProducts();
       rows = products.map(p => ({
         'رقم الموديل (ID)': p.id,
         'اسم الموديل (عربي)': p.name?.ar || '',

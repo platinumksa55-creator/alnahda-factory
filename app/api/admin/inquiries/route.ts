@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ success: false, error: 'غير مصرح لك' }, { status: 401 });
   }
 
-  const inquiries = getInquiries();
+  const inquiries = await getInquiries();
   return NextResponse.json({ success: true, inquiries });
 }
 
@@ -18,7 +18,7 @@ export async function PUT(req: NextRequest) {
 
   try {
     const { id, status } = await req.json();
-    const updated = updateInquiryStatus(id, status);
+    const updated = await updateInquiryStatus(id, status);
     if (!updated) {
       return NextResponse.json({ success: false, error: 'الرسالة غير موجودة' }, { status: 404 });
     }
@@ -39,7 +39,7 @@ export async function DELETE(req: NextRequest) {
     if (!id) {
       return NextResponse.json({ success: false, error: 'معرف الرسالة مطلوب' }, { status: 400 });
     }
-    const deleted = deleteInquiry(id);
+    const deleted = await deleteInquiry(id);
     return NextResponse.json({ success: deleted });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

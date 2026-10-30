@@ -33,9 +33,9 @@ export const metadata = {
 };
 
 export default async function AdminDashboardPage() {
-  const stats = getAnalyticsSummary();
-  const products = getRawProducts();
-  const inquiries = getInquiries();
+  const stats = await getAnalyticsSummary();
+  const products = await getRawProducts();
+  const inquiries = await getInquiries();
   const newInquiriesCount = inquiries.filter((i) => i.status === "new").length;
 
   const totalProducts = products.length;

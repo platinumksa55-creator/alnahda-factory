@@ -5,7 +5,7 @@ import { isAuthenticatedRequest } from '@/lib/admin-auth';
 
 export async function GET(req: NextRequest) {
   try {
-    const products = getRawProducts();
+    const products = await getRawProducts();
     return NextResponse.json({ success: true, products });
   } catch (error: any) {
     console.error('Error fetching products:', error);
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'اسم الموديل مطلوب' }, { status: 400 });
     }
 
-    const created = createOrUpdateProduct(body);
+    const created = await createOrUpdateProduct(body);
     revalidatePath('/', 'layout');
     return NextResponse.json({ success: true, product: created });
   } catch (error: any) {

@@ -3,23 +3,23 @@ import { readStoreFile, writeStoreFile } from './storage';
 
 const INQUIRIES_FILE = 'inquiries.json';
 
-export function getInquiries(): ContactInquiry[] {
-  return readStoreFile<ContactInquiry[]>(INQUIRIES_FILE, []);
+export async function getInquiries(): Promise<ContactInquiry[]> {
+  return await readStoreFile<ContactInquiry[]>(INQUIRIES_FILE, []);
 }
 
-export function saveInquiries(inquiries: ContactInquiry[]): boolean {
-  return writeStoreFile<ContactInquiry[]>(INQUIRIES_FILE, inquiries);
+export async function saveInquiries(inquiries: ContactInquiry[]): Promise<boolean> {
+  return await writeStoreFile<ContactInquiry[]>(INQUIRIES_FILE, inquiries);
 }
 
-export function addInquiry(data: {
+export async function addInquiry(data: {
   name: string;
   email: string;
   company?: string;
   phone?: string;
   service?: string;
   message: string;
-}): ContactInquiry {
-  const inquiries = getInquiries();
+}): Promise<ContactInquiry> {
+  const inquiries = await getInquiries();
   const newInquiry: ContactInquiry = {
     id: `inq-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
     name: data.name.trim(),
@@ -33,23 +33,26 @@ export function addInquiry(data: {
   };
 
   inquiries.unshift(newInquiry);
-  saveInquiries(inquiries);
+  await saveInquiries(inquiries);
   return newInquiry;
 }
 
-export function updateInquiryStatus(id: string, status: 'new' | 'read' | 'replied'): ContactInquiry | null {
-  const inquiries = getInquiries();
+export async function updateInquiryStatus(
+  id: string,
+  status: 'new' | 'read' | 'replied'
+): Promise<ContactInquiry | null> {
+  const inquiries = await getInquiries();
   const idx = inquiries.findIndex(i => i.id === id);
   if (idx === -1) return null;
 
   inquiries[idx].status = status;
-  saveInquiries(inquiries);
+  await saveInquiries(inquiries);
   return inquiries[idx];
 }
 
-export function deleteInquiry(id: string): boolean {
-  const inquiries = getInquiries();
+export async function deleteInquiry(id: string): Promise<boolean> {
+  const inquiries = await getInquiries();
   const filtered = inquiries.filter(i => i.id !== id);
   if (filtered.length === inquiries.length) return false;
-  return saveInquiries(filtered);
+  return await saveInquiries(filtered);
 }

@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     }
 
     // Save inquiry to dashboard store immediately so it's never lost
-    const savedInquiry = addInquiry({ name, email, company, phone, service, message });
+    const savedInquiry = await addInquiry({ name, email, company, phone, service, message });
 
     try {
       if (process.env.EMAIL_SERVER_HOST && process.env.EMAIL_SERVER_USER) {

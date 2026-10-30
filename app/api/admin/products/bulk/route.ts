@@ -332,7 +332,7 @@ export async function POST(req: NextRequest) {
           });
         }
 
-        const result = bulkImportProducts(parsedProducts);
+        const result = await bulkImportProducts(parsedProducts);
         revalidatePath('/', 'layout');
         return NextResponse.json({
           success: true,
@@ -366,7 +366,7 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    const result = bulkImportProducts(parsedProducts);
+    const result = await bulkImportProducts(parsedProducts);
     revalidatePath('/', 'layout');
     return NextResponse.json({
       success: true,

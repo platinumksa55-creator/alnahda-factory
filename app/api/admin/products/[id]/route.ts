@@ -10,7 +10,7 @@ export async function GET(
   try {
     const { id } = await params;
     const numId = parseInt(id, 10);
-    const product = getProductById(numId);
+    const product = await getProductById(numId);
 
     if (!product) {
       return NextResponse.json({ success: false, error: 'الموديل غير موجود' }, { status: 404 });
@@ -35,7 +35,7 @@ export async function PUT(
     const numId = parseInt(id, 10);
     const body = await req.json();
 
-    const updated = createOrUpdateProduct({
+    const updated = await createOrUpdateProduct({
       ...body,
       id: numId,
     });
@@ -58,7 +58,7 @@ export async function DELETE(
   try {
     const { id } = await params;
     const numId = parseInt(id, 10);
-    const success = deleteProduct(numId);
+    const success = await deleteProduct(numId);
 
     if (!success) {
       return NextResponse.json({ success: false, error: 'تعذر حذف الموديل أو الموديل غير موجود' }, { status: 404 });

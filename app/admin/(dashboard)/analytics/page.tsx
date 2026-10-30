@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function AdminAnalyticsPage() {
-  const stats = getAnalyticsSummary();
+  const stats = await getAnalyticsSummary();
 
   return <AnalyticsView stats={stats} />;
 }

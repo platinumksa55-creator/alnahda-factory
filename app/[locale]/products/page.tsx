@@ -15,7 +15,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   const t = (key: string) => getTranslation(locale, key);
   const productCategories = translations[locale]?.productCategories || [];
-  const dynamicProducts = getAllProducts(locale);
+  const dynamicProducts = await getAllProducts(locale);
   const allProducts = dynamicProducts.length > 0 ? dynamicProducts : (translations[locale]?.allProductsData || []);
 
   const getCategoryName = (categoryId: string) => {

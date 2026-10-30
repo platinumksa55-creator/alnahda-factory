@@ -12,7 +12,7 @@ export default async function DashboardLayout({
     redirect("/admin/login");
   }
 
-  const config = getAdminConfig();
+  const config = await getAdminConfig();
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">

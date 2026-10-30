@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { put } from '@vercel/blob';
 import fs from 'fs';
 import path from 'path';
 import { isAuthenticatedRequest } from '@/lib/admin-auth';
@@ -16,7 +17,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'لم يتم اختيار أي ملف' }, { status: 400 });
     }
 
-    // Validate type
     const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/svg+xml'];
     if (!validTypes.includes(file.type)) {
       return NextResponse.json(
@@ -25,7 +25,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Limit to 10MB
     if (file.size > 10 * 1024 * 1024) {
       return NextResponse.json(
         { success: false, error: 'حجم الصورة كبير جداً، الحد الأقصى 10 ميجابايت' },
@@ -36,33 +35,48 @@ export async function POST(req: NextRequest) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Sanitize filename
     const ext = path.extname(file.name) || '.png';
     const baseName = path
       .basename(file.name, ext)
       .replace(/[^a-zA-Z0-9_-]/g, '_')
       .substring(0, 30);
-    const uniqueFileName = `${Date.now()}-${baseName || 'model'}${ext}`;
+    const uniqueFileName = `uploads/${Date.now()}-${baseName || 'model'}${ext}`;
 
-    // On Vercel serverless environment, /var/task is read-only (EROFS).
-    // Return a Data URI so images work seamlessly both locally and on Vercel without external S3/Blob keys.
+    // Upload to Vercel Blob if configured
+    if (process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN) {
+      try {
+        const blob = await put(uniqueFileName, buffer, {
+          access: 'private',
+          contentType: file.type,
+          addRandomSuffix: false,
+        });
+        return NextResponse.json({
+          success: true,
+          url: `/api/blob/view?pathname=${encodeURIComponent(blob.pathname)}`,
+          fileName: blob.pathname,
+        });
+      } catch (blobError) {
+        console.warn('Vercel Blob upload fallback:', blobError);
+      }
+    }
+
+    // Local filesystem fallback when running locally without Blob
     const isVercel = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
-
     if (!isVercel) {
       try {
+        const localFileName = path.basename(uniqueFileName);
         const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
         if (!fs.existsSync(uploadsDir)) {
           fs.mkdirSync(uploadsDir, { recursive: true });
         }
-        const filePath = path.join(uploadsDir, uniqueFileName);
-        fs.writeFileSync(filePath, buffer);
+        fs.writeFileSync(path.join(uploadsDir, localFileName), buffer);
         return NextResponse.json({
           success: true,
-          url: `/uploads/${uniqueFileName}`,
-          fileName: uniqueFileName,
+          url: `/uploads/${localFileName}`,
+          fileName: localFileName,
         });
       } catch {
-        // Fallback to Data URL if local disk write fails
+        // fallback to data url
       }
     }
 

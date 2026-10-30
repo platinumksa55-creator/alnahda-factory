@@ -8,7 +8,7 @@ const CONFIG_FILE = 'admin-config.json';
 const SESSION_COOKIE_NAME = 'alnahda_admin_token';
 const SECRET_KEY = process.env.ADMIN_SESSION_SECRET || 'alnahda-textile-factory-secret-key-2025';
 
-export function getAdminConfig(): AdminConfig {
+export async function getAdminConfig(): Promise<AdminConfig> {
   const salt = 'default-salt-alnahda';
   const passwordHash = crypto.createHash('sha256').update('admin123' + salt).toString('hex');
   const fallback: AdminConfig = {
@@ -20,18 +20,18 @@ export function getAdminConfig(): AdminConfig {
     contactEmail: 'info@alnahdafactory.com',
     contactAddress: {
       ar: 'المحلة الكبرى - 2 شارع الحلو - طريق دمرو',
-      en: 'EL-Mahalla EL Kobra, 2 AL-Halou St, Damro Road'
-    }
+      en: 'EL-Mahalla EL Kobra, 2 AL-Halou St, Damro Road',
+    },
   };
-  return readStoreFile<AdminConfig>(CONFIG_FILE, fallback);
+  return await readStoreFile<AdminConfig>(CONFIG_FILE, fallback);
 }
 
-export function saveAdminConfig(config: AdminConfig): boolean {
-  return writeStoreFile<AdminConfig>(CONFIG_FILE, config);
+export async function saveAdminConfig(config: AdminConfig): Promise<boolean> {
+  return await writeStoreFile<AdminConfig>(CONFIG_FILE, config);
 }
 
-export function verifyAdminCredentials(username: string, password: string):boolean {
-  const config = getAdminConfig();
+export async function verifyAdminCredentials(username: string, password: string): Promise<boolean> {
+  const config = await getAdminConfig();
   if (config.username !== username) {
     return false;
   }
@@ -39,27 +39,25 @@ export function verifyAdminCredentials(username: string, password: string):boole
   return hash === config.passwordHash;
 }
 
-export function updateAdminPassword(newPassword: string): boolean {
-  const config = getAdminConfig();
+export async function updateAdminPassword(newPassword: string): Promise<boolean> {
+  const config = await getAdminConfig();
   const salt = crypto.randomBytes(16).toString('hex');
   const passwordHash = crypto.createHash('sha256').update(newPassword + salt).toString('hex');
   config.salt = salt;
   config.passwordHash = passwordHash;
-  return saveAdminConfig(config);
+  return await saveAdminConfig(config);
 }
 
-// Generate signed session token
 export function createSessionToken(username: string): string {
   const payload = {
     u: username,
-    exp: Date.now() + 1000 * 60 * 60 * 24 * 7, // 7 days
+    exp: Date.now() + 1000 * 60 * 60 * 24 * 7,
   };
   const payloadStr = Buffer.from(JSON.stringify(payload)).toString('base64url');
   const signature = crypto.createHmac('sha256', SECRET_KEY).update(payloadStr).toString('base64url');
   return `${payloadStr}.${signature}`;
 }
 
-// Verify signed session token
 export function verifySessionToken(token: string | undefined | null): boolean {
   if (!token) return false;
   const parts = token.split('.');
@@ -79,14 +77,12 @@ export function verifySessionToken(token: string | undefined | null): boolean {
   }
 }
 
-// Check session in API route or Server Component
 export async function isAuthenticated(): Promise<boolean> {
   const cookieStore = await cookies();
   const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
   return verifySessionToken(token);
 }
 
-// Check session from NextRequest (for route handlers or middleware)
 export function isAuthenticatedRequest(req: NextRequest): boolean {
   const token = req.cookies.get(SESSION_COOKIE_NAME)?.value;
   return verifySessionToken(token);

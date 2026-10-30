@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const config = getAdminConfig();
+    const config = await getAdminConfig();
     return NextResponse.json({
       success: true,
       settings: {
@@ -34,9 +34,9 @@ export async function POST(req: NextRequest) {
 
     if (action === 'change_password') {
       const { oldPassword, newPassword } = body;
-      const config = getAdminConfig();
+      const config = await getAdminConfig();
 
-      if (!verifyAdminCredentials(config.username, oldPassword)) {
+      if (!(await verifyAdminCredentials(config.username, oldPassword))) {
         return NextResponse.json({ success: false, error: 'كلمة المرور الحالية غير صحيحة' }, { status: 400 });
       }
 
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: false, error: 'كلمة المرور الجديدة يجب أن تكون 6 أحرف على الأقل' }, { status: 400 });
       }
 
-      const updated = updateAdminPassword(newPassword);
+      const updated = await updateAdminPassword(newPassword);
       if (!updated) {
         return NextResponse.json({ success: false, error: 'فشل حفظ كلمة المرور الجديدة' }, { status: 500 });
       }
@@ -53,13 +53,13 @@ export async function POST(req: NextRequest) {
     }
 
     if (action === 'update_info') {
-      const config = getAdminConfig();
+      const config = await getAdminConfig();
       if (body.contactPhone) config.contactPhone = body.contactPhone;
       if (body.contactEmail) config.contactEmail = body.contactEmail;
       if (body.contactAddress) config.contactAddress = body.contactAddress;
       if (body.siteName) config.siteName = body.siteName;
 
-      saveAdminConfig(config);
+      await saveAdminConfig(config);
       return NextResponse.json({ success: true, message: 'تم تحديث البيانات بنجاح' });
     }
 

@@ -12,7 +12,7 @@ export default async function AdminProductsPage({
 }: {
   searchParams?: Promise<{ edit?: string }>;
 }) {
-  const products = getRawProducts();
+  const products = await getRawProducts();
   const resolvedSearchParams = searchParams ? await searchParams : undefined;
   const editId = resolvedSearchParams?.edit ? parseInt(resolvedSearchParams.edit, 10) : undefined;
 

@@ -13,12 +13,12 @@ export const defaultCategories: ProductCategory[] = [
   { id: 'industrial', name: { ar: 'منسوجات صناعية', en: 'Industrial Textiles' } },
 ];
 
-export function getRawProducts(): ProductItem[] {
-  return readStoreFile<ProductItem[]>(PRODUCTS_FILE, []);
+export async function getRawProducts(): Promise<ProductItem[]> {
+  return await readStoreFile<ProductItem[]>(PRODUCTS_FILE, []);
 }
 
-export function saveRawProducts(products: ProductItem[]): boolean {
-  return writeStoreFile<ProductItem[]>(PRODUCTS_FILE, products);
+export async function saveRawProducts(products: ProductItem[]): Promise<boolean> {
+  return await writeStoreFile<ProductItem[]>(PRODUCTS_FILE, products);
 }
 
 // Convert product for specific locale (ar or en)
@@ -44,31 +44,31 @@ export function localizeProduct(product: ProductItem, locale: 'ar' | 'en' = 'ar'
   };
 }
 
-export function getAllProducts(locale?: 'ar' | 'en') {
-  const products = getRawProducts();
+export async function getAllProducts(locale?: 'ar' | 'en') {
+  const products = await getRawProducts();
   if (!locale) return products;
   return products.map(p => localizeProduct(p, locale));
 }
 
-export function getFeaturedProducts(locale?: 'ar' | 'en') {
-  const products = getRawProducts();
+export async function getFeaturedProducts(locale?: 'ar' | 'en') {
+  const products = await getRawProducts();
   const featured = products.filter(p => p.featured);
-  // If no featured products, return first 3
   const selection = featured.length > 0 ? featured : products.slice(0, 3);
   if (!locale) return selection;
   return selection.map(p => localizeProduct(p, locale));
 }
 
-export function getProductBySlug(slug: string, locale?: 'ar' | 'en') {
-  const products = getRawProducts();
-  const product = products.find(p => p.slug === slug);
+export async function getProductBySlug(slug: string, locale?: 'ar' | 'en') {
+  const decodedSlug = decodeURIComponent(slug);
+  const products = await getRawProducts();
+  const product = products.find(p => p.slug === slug || p.slug === decodedSlug);
   if (!product) return null;
   if (!locale) return product;
   return localizeProduct(product, locale);
 }
 
-export function getProductById(id: number): ProductItem | null {
-  const products = getRawProducts();
+export async function getProductById(id: number): Promise<ProductItem | null> {
+  const products = await getRawProducts();
   return products.find(p => p.id === id) || null;
 }
 
@@ -81,16 +81,15 @@ function slugify(text: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-export function createOrUpdateProduct(data: Partial<ProductItem>): ProductItem {
-  const products = getRawProducts();
-  
+export async function createOrUpdateProduct(data: Partial<ProductItem>): Promise<ProductItem> {
+  const products = await getRawProducts();
+
   if (data.id) {
-    // Update existing product
     const index = products.findIndex(p => p.id === data.id);
     if (index === -1) {
       throw new Error(`Product with ID ${data.id} not found`);
     }
-    
+
     const existing = products[index];
     const updated: ProductItem = {
       ...existing,
@@ -99,22 +98,20 @@ export function createOrUpdateProduct(data: Partial<ProductItem>): ProductItem {
       slug: data.slug || existing.slug,
       updatedAt: new Date().toISOString(),
     };
-    
+
     products[index] = updated;
-    saveRawProducts(products);
+    await saveRawProducts(products);
     return updated;
   } else {
-    // Create new product
     const maxId = products.reduce((max, p) => (p.id > max ? p.id : max), 0);
     const newId = maxId + 1;
-    
+
     let generatedSlug = data.slug;
     if (!generatedSlug) {
       const baseName = data.name?.en || data.name?.ar || `model-${newId}`;
       generatedSlug = slugify(baseName) || `model-${newId}`;
     }
-    
-    // Ensure slug uniqueness
+
     let finalSlug = generatedSlug;
     let counter = 1;
     while (products.some(p => p.slug === finalSlug)) {
@@ -143,26 +140,26 @@ export function createOrUpdateProduct(data: Partial<ProductItem>): ProductItem {
     };
 
     products.unshift(newProduct);
-    saveRawProducts(products);
+    await saveRawProducts(products);
     return newProduct;
   }
 }
 
-export function deleteProduct(id: number): boolean {
-  const products = getRawProducts();
+export async function deleteProduct(id: number): Promise<boolean> {
+  const products = await getRawProducts();
   const filtered = products.filter(p => p.id !== id);
   if (filtered.length === products.length) {
     return false;
   }
-  return saveRawProducts(filtered);
+  return await saveRawProducts(filtered);
 }
 
-export function bulkImportProducts(items: Partial<ProductItem>[]): {
+export async function bulkImportProducts(items: Partial<ProductItem>[]): Promise<{
   addedCount: number;
   updatedCount: number;
   products: ProductItem[];
-} {
-  const products = getRawProducts();
+}> {
+  const products = await getRawProducts();
   let addedCount = 0;
   let updatedCount = 0;
 
@@ -171,7 +168,6 @@ export function bulkImportProducts(items: Partial<ProductItem>[]): {
   for (const data of items) {
     if (!data.name?.ar && !data.name?.en) continue;
 
-    // Check if an existing product matches by ID, slug, or exact Arabic/English name
     const existingIndex = products.findIndex(
       p =>
         (data.id && p.id === data.id) ||
@@ -266,6 +262,6 @@ export function bulkImportProducts(items: Partial<ProductItem>[]): {
     }
   }
 
-  saveRawProducts(products);
+  await saveRawProducts(products);
   return { addedCount, updatedCount, products };
 }

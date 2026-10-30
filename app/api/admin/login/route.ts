@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'اسم المستخدم وكلمة المرور مطلوبان' }, { status: 400 });
     }
 
-    const isValid = verifyAdminCredentials(username, password);
+    const isValid = await verifyAdminCredentials(username, password);
     if (!isValid) {
       return NextResponse.json({ success: false, error: 'بيانات الدخول غير صحيحة' }, { status: 401 });
     }

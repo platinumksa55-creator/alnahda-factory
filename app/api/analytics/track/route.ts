@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     const userAgent = req.headers.get('user-agent') || '';
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('x-real-ip') || '127.0.0.1';
 
-    recordVisit({
+    await recordVisit({
       visitorId,
       path,
       referrer,

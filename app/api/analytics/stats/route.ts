@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const summary = getAnalyticsSummary();
+    const summary = await getAnalyticsSummary();
     return NextResponse.json({ success: true, data: summary });
   } catch (error: any) {
     console.error('Error fetching analytics stats:', error);
@@ -22,8 +22,8 @@ export async function DELETE(req: NextRequest) {
   }
 
   try {
-    resetAnalytics();
-    return NextResponse.json({ success: true, data: getAnalyticsSummary() });
+    await resetAnalytics();
+    return NextResponse.json({ success: true, data: await getAnalyticsSummary() });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

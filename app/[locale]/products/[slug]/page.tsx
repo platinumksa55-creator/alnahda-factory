@@ -24,7 +24,7 @@ interface ProductPageProps {
 // Generate dynamic metadata for SEO
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug, locale } = await params;
-  const product = getProductBySlug(slug, locale) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
+  const product = (await getProductBySlug(slug, locale)) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
   const t = (key: string) => getTranslation(locale, key);
 
   if (!product) {
@@ -41,8 +41,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug, locale } = await params;
   const t = (key: string) => getTranslation(locale, key);
   
-  const allProducts = getAllProducts(locale);
-  const product = getProductBySlug(slug, locale) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
+  const allProducts = await getAllProducts(locale);
+  const product = (await getProductBySlug(slug, locale)) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
 
   if (!product) {
     notFound();

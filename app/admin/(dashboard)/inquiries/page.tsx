@@ -7,7 +7,7 @@ export const metadata = {
   title: "رسائل العملاء | لوحة التحكم",
 };
 
-export default function AdminInquiriesPage() {
-  const inquiries = getInquiries();
+export default async function AdminInquiriesPage() {
+  const inquiries = await getInquiries();
   return <InquiriesManager initialInquiries={inquiries} />;
 }
