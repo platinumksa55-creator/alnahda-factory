@@ -23,15 +23,91 @@ const openSans = Open_Sans({
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = (key: string) => getTranslation(locale, key)
+  const isAr = locale === "ar";
+  const siteUrl = "https://alnahda-factory-delta.vercel.app";
+
+  const title = isAr
+    ? "مصنع النهضة للمنسوجات | أجود المفروشات والمناشف القطنية بالمحلة الكبرى"
+    : "Al-Nahda Textile Factory | Premium Egyptian Cotton Towels & Linens";
+
+  const description = isAr
+    ? "مصنع النهضة للمنسوجات بالمحلة الكبرى - متخصصون في صناعة وتوريد وتصدير أفخر المناشف القطنية الفندقية والشاطئية، وبرانس الحمام، والمفروشات بجودة عالمية وأسعار جملة منافسة."
+    : "Al-Nahda Textile Factory in El-Mahalla El-Kubra - Leaders in manufacturing, wholesale, and export of premium hotel bath towels, beach towels, velour robes, and luxury Egyptian cotton textiles.";
+
+  const keywords = isAr
+    ? [
+        "مصنع منسوجات",
+        "مصنع فوط بالمحلة الكبرى",
+        "مناشف قطنية",
+        "مناشف فندقية",
+        "مناشف شاطئ",
+        "تصدير مفروشات مصرية",
+        "قطن مصري 100%",
+        "مصنع النهضة",
+        "توريد مناشف فنادق",
+        "فوط مطبخ قطن",
+      ]
+    : [
+        "Textile Factory Egypt",
+        "El Mahalla Towel Manufacturer",
+        "Egyptian Cotton Towels",
+        "Hotel Bath Towels Wholesale",
+        "Beach Towels Supplier",
+        "Luxury Velour Towels",
+        "Al Nahda Textiles",
+      ];
 
   return {
-    title: t("companyName"),
-    description: t("footerDescription"),
-    icons: {
-      icon: '/favicon.ico',
+    title: {
+      default: title,
+      template: isAr ? "%s | مصنع النهضة للمنسوجات" : "%s | Al-Nahda Textile Factory",
     },
-  }
+    description,
+    keywords,
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `${siteUrl}/${locale}`,
+      languages: {
+        ar: `${siteUrl}/ar`,
+        en: `${siteUrl}/en`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${siteUrl}/${locale}`,
+      siteName: isAr ? "مصنع النهضة للمنسوجات" : "Al-Nahda Textiles",
+      locale: isAr ? "ar_EG" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "/images/al-nahda-logo.png",
+          width: 500,
+          height: 500,
+          alt: isAr ? "لوجو مصنع النهضة للمنسوجات" : "Al-Nahda Textile Logo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/al-nahda-logo.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/images/al-nahda-logo.png",
+    },
+  };
 }
 
 export default async function RootLayout({

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation" // استيراد hook لمعرف�
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
 import { getTranslation, Locale } from "@/lib/i18n" // استيراد أدوات الترجمة
+import { SiteSearchModal } from "@/components/site-search-modal"
 
 // 1. المكون الآن يستقبل اللغة كـ prop
 export function Navigation({ locale }: { locale: Locale }) {
@@ -42,8 +43,8 @@ export function Navigation({ locale }: { locale: Locale }) {
           </Link>
 
           {/* Desktop Navigation - 5. تم تعديل كل الروابط لتشمل اللغة */}
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center gap-6">
               <Link href={`/${locale}`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
                 {t("home")}
               </Link>
@@ -60,6 +61,9 @@ export function Navigation({ locale }: { locale: Locale }) {
 
             <div className="h-5 w-px bg-neutral-200" />
 
+            {/* Search Modal Button */}
+            <SiteSearchModal locale={locale} />
+
             {/* 6. تم تحويل زر تبديل اللغة إلى رابط */}
             <Link href={getRedirectedPath()}>
               <Button
@@ -74,7 +78,8 @@ export function Navigation({ locale }: { locale: Locale }) {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="flex md:hidden items-center gap-2">
+            <SiteSearchModal locale={locale} />
             <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>

@@ -9,6 +9,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslation, Locale, translations } from "@/lib/i18n";
 import { getProductBySlug, getAllProducts } from "@/lib/products-store";
+import { getApprovedProductComments } from "@/lib/comments-store";
+import { ProductReviewsSection } from "@/components/product-reviews-section";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -26,14 +28,48 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const { slug, locale } = await params;
   const product = (await getProductBySlug(slug, locale)) || translations[locale]?.allProductsData?.find((p) => p.slug === slug);
   const t = (key: string) => getTranslation(locale, key);
+  const siteUrl = "https://alnahda-factory-delta.vercel.app";
 
   if (!product) {
     return { title: t("productNotFound") };
   }
 
+  const isAr = locale === "ar";
+  const title = `${product.name} | ${isAr ? "مصنع النهضة للمنسوجات" : "Al-Nahda Textiles"}`;
+  const description = `${product.description} - ${product.category} من مصنع النهضة للمنسوجات قطن 100% عالي الجودة بالمحلة الكبرى.`;
+  const canonical = `${siteUrl}/${locale}/products/${slug}`;
+  const primaryImage = product.images?.[0] || "/images/al-nahda-logo.png";
+
   return {
-    title: `${product.name} | ${t("companyName")}`,
-    description: product.description,
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        ar: `${siteUrl}/ar/products/${slug}`,
+        en: `${siteUrl}/en/products/${slug}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "website",
+      images: [
+        {
+          url: primaryImage,
+          width: 800,
+          height: 600,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [primaryImage],
+    },
   };
 }
 
@@ -49,6 +85,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   }
   
   const relatedProducts = allProducts.filter(p => p.category === product.category && p.slug !== product.slug).slice(0, 3);
+  const initialComments = await getApprovedProductComments(product.id);
   
   const whatsappNumber = getTranslation(locale, "contactPhone");
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`;
@@ -171,6 +208,15 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </section>
       
+      {/* Reviews & Comments Section */}
+      <ProductReviewsSection
+        productId={product.id}
+        productSlug={product.slug}
+        productName={product.name}
+        initialComments={initialComments}
+        locale={locale}
+      />
+
       {relatedProducts.length > 0 && (
         <section className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

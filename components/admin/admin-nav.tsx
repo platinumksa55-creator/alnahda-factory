@@ -39,6 +39,12 @@ const navItems = [
     exact: false,
   },
   {
+    name: "تعليقات وتقييمات المنتجات",
+    href: "/admin/comments",
+    icon: MessageSquare,
+    exact: false,
+  },
+  {
     name: "إحصائيات وعداد الزوار",
     href: "/admin/analytics",
     icon: BarChart3,

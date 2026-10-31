@@ -95,3 +95,21 @@ export interface ContactInquiry {
   status: "new" | "read" | "replied";
   createdAt: string;
 }
+
+export interface ProductComment {
+  id: string;
+  productId: number;
+  productSlug: string;
+  productName: string;
+  authorName: string;
+  authorEmail: string;
+  content: string;
+  rating: number; // 1-5
+  status: "pending" | "approved" | "rejected";
+  createdAt: string;
+  reply?: {
+    content: string;
+    repliedAt: string;
+    repliedBy: string;
+  };
+}

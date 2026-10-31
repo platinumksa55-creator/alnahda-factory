@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   MessageSquare,
   FileSpreadsheet,
+  Star,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,6 +25,7 @@ import { Badge } from "@/components/ui/badge";
 import { getAnalyticsSummary } from "@/lib/analytics-store";
 import { getRawProducts } from "@/lib/products-store";
 import { getInquiries } from "@/lib/inquiries-store";
+import { getComments } from "@/lib/comments-store";
 import { AnalyticsChart } from "@/components/admin/analytics-chart";
 
 export const dynamic = "force-dynamic";
@@ -36,7 +38,9 @@ export default async function AdminDashboardPage() {
   const stats = await getAnalyticsSummary();
   const products = await getRawProducts();
   const inquiries = await getInquiries();
+  const comments = await getComments();
   const newInquiriesCount = inquiries.filter((i) => i.status === "new").length;
+  const pendingCommentsCount = comments.filter((c) => c.status === "pending").length;
 
   const totalProducts = products.length;
   const featuredProducts = products.filter((p) => p.featured).length;
@@ -83,7 +87,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* 5 Stats Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-5">
         {/* Today's Visitors */}
         <Card className="border-slate-200/80 shadow-xs hover:shadow-md transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -155,6 +159,27 @@ export default async function AdminDashboardPage() {
               <span className="text-rose-600 font-semibold">{newInquiriesCount} رسالة جديدة</span>
               <Link href="/admin/inquiries" className="text-primary hover:underline">
                 عرض
+              </Link>
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Product Comments Card */}
+        <Card className="border-slate-200/80 shadow-xs hover:shadow-md transition-shadow">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-xs font-semibold text-slate-500">
+              تعليقات وتقييمات
+            </CardTitle>
+            <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+              <Star className="w-5 h-5" />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-3xl font-bold text-slate-900">{comments.length}</div>
+            <p className="text-xs text-slate-500 mt-1 flex items-center justify-between">
+              <span className="text-amber-600 font-semibold">{pendingCommentsCount} بانتظار الرد</span>
+              <Link href="/admin/comments" className="text-primary hover:underline">
+                إدارة
               </Link>
             </p>
           </CardContent>
