@@ -12,18 +12,18 @@ export function Footer({ locale }: { locale: Locale }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 rtl:space-x-reverse mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/al-nahda-logo.png"
                 alt={t("companyName")}
                 width={40}
                 height={40}
-                className="w-10 h-10"
+                className="w-10 h-10 shrink-0"
               />
               <span className="font-work-sans font-bold text-xl">{t("companyName")}</span>
             </div>
             <p className="font-open-sans text-neutral-300 mb-6 leading-relaxed max-w-md">{t("footerDescription")}</p>
-            <div className="flex space-x-4 rtl:space-x-reverse">
+            <div className="flex items-center gap-4">
               <Link href="#" className="text-neutral-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></Link>
               <Link href="#" className="text-neutral-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></Link>
               <Link href="#" className="text-neutral-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></Link>
@@ -46,17 +46,17 @@ export function Footer({ locale }: { locale: Locale }) {
           <div>
             <h3 className="font-work-sans font-semibold text-lg mb-4">{t("contactInfo")}</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-3 rtl:space-x-reverse">
+              <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                 {/* تم استبدال النص الثابت بدالة الترجمة */}
-                <span className="font-open-sans text-neutral-300">{t("contactPhone")}</span>
+                <span className="font-open-sans text-neutral-300" dir="ltr">{t("contactPhone")}</span>
               </li>
-              <li className="flex items-center space-x-3 rtl:space-x-reverse">
+              <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
                 {/* تم استبدال النص الثابت بدالة الترجمة */}
                 <span className="font-open-sans text-neutral-300">{t("contactEmail")}</span>
               </li>
-              <li className="flex items-start space-x-3 rtl:space-x-reverse">
+              <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
                 {/* تم استبدال النص الثابت بدالة الترجمة */}
                 <span className="font-open-sans text-neutral-300">{t("contactAddress")}</span>

@@ -30,41 +30,45 @@ export function Navigation({ locale }: { locale: Locale }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - 4. تم تعديل الرابط ليشمل اللغة */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2 rtl:space-x-reverse">
+          <Link href={`/${locale}`} className="flex items-center gap-3">
             <Image
               src="/images/al-nahda-logo.png"
               alt="Al-Nahda for Textiles"
               width={40}
               height={40}
-              className="w-10 h-10"
+              className="w-10 h-10 shrink-0"
             />
             <span className="font-work-sans font-bold text-xl text-primary">{t("companyName")}</span>
           </Link>
 
           {/* Desktop Navigation - 5. تم تعديل كل الروابط لتشمل اللغة */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-            <Link href={`/${locale}`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
-              {t("home")}
-            </Link>
-            <Link href={`/${locale}/about`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
-              {t("about")}
-            </Link>
-            <Link href={`/${locale}/products`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
-              {t("products")}
-            </Link>
-            <Link href={`/${locale}/contact`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
-              {t("contact")}
-            </Link>
+          <div className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-7">
+              <Link href={`/${locale}`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
+                {t("home")}
+              </Link>
+              <Link href={`/${locale}/about`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
+                {t("about")}
+              </Link>
+              <Link href={`/${locale}/products`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
+                {t("products")}
+              </Link>
+              <Link href={`/${locale}/contact`} className="text-neutral-700 hover:text-primary transition-colors font-medium">
+                {t("contact")}
+              </Link>
+            </div>
+
+            <div className="h-5 w-px bg-neutral-200" />
 
             {/* 6. تم تحويل زر تبديل اللغة إلى رابط */}
             <Link href={getRedirectedPath()}>
               <Button
                 variant="outline"
                 size="sm"
-                className="flex items-center gap-2 bg-transparent"
+                className="flex items-center gap-2 bg-transparent px-3.5"
               >
                 <Globe className="w-4 h-4" />
-                {t("switchToEnglish")}
+                <span>{t("switchToEnglish")}</span>
               </Button>
             </Link>
           </div>
