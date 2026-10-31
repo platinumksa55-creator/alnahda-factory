@@ -1,5 +1,2341 @@
 [
   {
+    "id": 10,
+    "slug": "flamingo-tropical-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ قطيفة بنقشة الفلامنجو الاستوائية",
+      "en": "Flamingo Tropical Velour Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة شاطئ فاخرة من القطن الوبري الكثيف باللون الأسود مع نقوش طيور الفلامنجو الوردية وأوراق المونستيرا الاستوائية.",
+      "en": "Luxury thick cotton terry beach towel in rich black featuring vibrant pink flamingos and tropical monstera leaf patterns."
+    },
+    "longDescription": {
+      "ar": "طقم مناشف شاطئ مصنع من القطن الطبيعي 100% بملمس قطيفة وبري ناعم وعالي الامتصاص. يتميز بأرضية سوداء أنيقة مزينة برسومات طيور الفلامنجو باللون الوردي الزاهي وأوراق استوائية مع إطار علوي وسفلي مزخرف بأزهار الهيبسكس.",
+      "en": "Crafted from 100% natural looped terry cotton with a plush velour finish. Features a rich black background adorned with hot pink flamingos, tropical leaves, and decorative hibiscus borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 15,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-01.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري قطيفة",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "الألوان": "أسود × فوشيا × فيروزي"
+      },
+      "en": {
+        "Material": "100% Velour Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Colors": "Black / Hot Pink / Turquoise"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:44:35.709Z"
+  },
+  {
+    "id": 11,
+    "slug": "i-love-football-striped-towel-collection",
+    "name": {
+      "ar": "مجموعة مناشف رياضية مقلمة (I Love Football)",
+      "en": "I Love Football Striped Sports Towel Set"
+    },
+    "description": {
+      "ar": "مجموعة مناشف رياضية وشاطئية مقلمة بتصميم كرة القدم بثلاثة ألوان جذابة (أبيض، أحمر، أزرق مع الأسود).",
+      "en": "Striped sports and beach towel collection featuring a central football motif in three bold colorways (White, Red, Blue on Black)."
+    },
+    "longDescription": {
+      "ar": "مناشف قطنية رياضية عالية الامتصاص مصممة لعشاق كرة القدم والأندية الرياضية، بتقليمات طولية كلاسيكية وكرة قدم في المنتصف مع عبارة I LOVE FOOTBALL المنسوجة بدقة.",
+      "en": "High-absorbency cotton sports towels designed for football enthusiasts and athletic clubs, featuring bold vertical stripes, a central soccer ball graphic, and woven I LOVE FOOTBALL borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 16,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-02.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي عالي الامتصاص",
+        "الوزن": "420 جم/م²",
+        "المقاس": "75 × 150 سم",
+        "الألوان المتوفرة": "أبيض/أسود، أحمر/أسود، أزرق/أسود"
+      },
+      "en": {
+        "Material": "100% High-Absorbency Cotton",
+        "Weight": "420 GSM",
+        "Size": "75 x 150 cm",
+        "Colors": "Black/White, Black/Red, Black/Blue"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:43:35.710Z"
+  },
+  {
+    "id": 12,
+    "slug": "nautical-anchor-buoy-navy-towel",
+    "name": {
+      "ar": "منشفة بحرية كحلي بنقشة المرساة وطوق النجاة",
+      "en": "Nautical Anchor & Lifebuoy Navy Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة بحر قطنية باللون الكحلي الداكن مزينة برسومات المرساة وطوق النجاة والسلاسل البحرية البيضاء.",
+      "en": "Deep navy blue cotton beach towel featuring classic white nautical anchor, lifebuoy, and chain border motifs."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ كلاسيكية بطابع بحري أنيق، منسوجة من القطن الوبري الفاخر باللون الكحلي العميق مع تفاصيل بيضاء بارزة تشمل مرساة السفينة وطوق النجاة وطيور النورس وحواف السلاسل البحرية.",
+      "en": "Classic nautical-themed beach towel woven from thick looped terry cotton in deep navy blue with crisp white anchor, life preserver, seagull, and chain border illustrations."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 17,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-03.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري معالج",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "كحلي × أبيض"
+      },
+      "en": {
+        "Material": "100% Treated Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Navy Blue & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:42:35.710Z"
+  },
+  {
+    "id": 13,
+    "slug": "sailing-navy-safety-seaside-towel",
+    "name": {
+      "ar": "منشفة شاطئ (Sailing Navy Safety) بطابع المراكب الشراعية",
+      "en": "Sailing Navy Safety Seaside Cotton Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية فاخرة بتصميم مركب شراعي ودفة سفينة باللونين الكحلي والأبيض للمنتجعات البحرية.",
+      "en": "Premium navy and white cotton beach towel featuring a central sailboat emblem, ship wheel, and Sailing Navy Safety typography."
+    },
+    "longDescription": {
+      "ar": "منشفة مصممة خصيصاً للقرى السياحية واليخوت والمنتجعات الساحلية، تجمع بين المتانة العالية والنعومة الفائقة مع نقشة الجاكار المطوية بعناية لإبراز المركب الشراعي وعجلة القيادة البحرية.",
+      "en": "Specially crafted for coastal resorts, yachts, and beach clubs. Combines superior durability and plush softness with a striking sailboat, lifebuoy, and helm design."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 18,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-04.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن جاكار",
+        "الوزن": "460 جم/م²",
+        "المقاس": "85 × 165 سم",
+        "اللون": "كحلي × أبيض"
+      },
+      "en": {
+        "Material": "100% Jacquard Cotton",
+        "Weight": "460 GSM",
+        "Size": "85 x 165 cm",
+        "Color": "Navy Blue & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:41:35.710Z"
+  },
+  {
+    "id": 14,
+    "slug": "navy-striped-sailboat-red-trim-towel",
+    "name": {
+      "ar": "منشفة شاطئ كحلي مقلمة بتطريز مركب شراعي وحافة حمراء",
+      "en": "Navy Striped Sailboat Towel with Red Trim"
+    },
+    "description": {
+      "ar": "منشفة قطيفة باللون الكحلي مع تقليمات سماوية ورسمة مركب شراعي في المنتصف وحواف حمراء أنيقة.",
+      "en": "Plush navy blue terry towel featuring sky-blue stripes, a central sailboat graphic, and contrasting red hem trim."
+    },
+    "longDescription": {
+      "ar": "تصميم عصري يجمع بين الخطوط البحرية باللون الأزرق الفاتح والأرضية الكحلية الغنية مع تطريز مركب شراعي متقن وكنار أحمر يضفي لمسة فندقية فاخرة.",
+      "en": "Modern coastal design pairing sky-blue horizontal stripes on a rich navy base with a detailed sailboat motif and vibrant red piping along the edges."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 19,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-05.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طويل التيلة",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "كحلي × لبني × أحمر"
+      },
+      "en": {
+        "Material": "100% Long-Staple Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Navy / Sky Blue / Red"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:40:35.710Z"
+  },
+  {
+    "id": 15,
+    "slug": "sthame-collection-kitchen-towel-pack-vertical",
+    "name": {
+      "ar": "طقم فوط مطبخ ووجه وافل (Sthame Collection) - 3 قطع",
+      "en": "Sthame Collection Waffle Kitchen & Hand Towel 3-Pack"
+    },
+    "description": {
+      "ar": "عبوة مكونة من 3 فوط مطبخ وسفرة بنسيج الوافل البارز وتطريز القهوة بألوان الباستيل (موف، أصفر، وردي).",
+      "en": "3-piece set of waffle-weave kitchen and hand towels in lavender, yellow, and pink with woven coffee motifs."
+    },
+    "longDescription": {
+      "ar": "طقم فوط مطبخ عملي وأنيق مكون من 3 قطع متناسقة (لافندر، أصفر مشرق، ووردي مزين بكنار منسوج بنقشة دلة وفنجان القهوة وحبوب البن)، مثالي للاستخدام اليومي والهدايا المنزلية.",
+      "en": "Practical and stylish 3-piece kitchen towel pack featuring bumpy waffle-weave terry textures in lavender, bright yellow, and pink with a woven coffee pot and cup jacquard band."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 20,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-06.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وافل وبري",
+        "عدد القطع": "3 قطع في العبوة",
+        "المقاس": "40 × 60 سم",
+        "الألوان": "موف × أصفر × وردي"
+      },
+      "en": {
+        "Material": "100% Waffle Terry Cotton",
+        "Pack Size": "3 Towels per Pack",
+        "Size": "40 x 60 cm",
+        "Colors": "Lavender, Yellow, Pink"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:39:35.710Z"
+  },
+  {
+    "id": 16,
+    "slug": "sthame-collection-kitchen-towels-wholesale-bundle",
+    "name": {
+      "ar": "مجموعة أطقم فوط مطبخ وافل (عرض 3 عبوات جملة)",
+      "en": "Sthame Collection Kitchen Towels Wholesale 3-Bundle"
+    },
+    "description": {
+      "ar": "عرض تجاري مكون من 3 عبوات لفوط المطبخ القطنية بنسيج الوافل ونقشة القهوة لتجار الجملة والمعارض.",
+      "en": "Commercial wholesale display of three 3-pack waffle-weave kitchen towel sets with decorative coffee borders."
+    },
+    "longDescription": {
+      "ar": "تشكيلة مخصصة لتجار الجملة ومحلات المفروشات المنزلية، تتضمن 3 عبوات مغلفة بعناية من فوط المطبخ القطنية فائقة الامتصاص بنسيج الوافل البارز وتطريز القهوة العصري.",
+      "en": "Designed for wholesale distributors and home linen retailers, showcasing three neatly banded 3-piece waffle kitchen towel packs with high-absorbency cotton construction."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 21,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-07.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وافل",
+        "المحتوى": "3 عبوات (9 فوط إجمالاً)",
+        "المقاس": "40 × 60 سم",
+        "التغليف": "حزام ورقي مطبوع فاخر"
+      },
+      "en": {
+        "Material": "100% Waffle Cotton",
+        "Contents": "3 Packs (9 Towels Total)",
+        "Size": "40 x 60 cm",
+        "Packaging": "Printed Paper Sleeve"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:38:35.710Z"
+  },
+  {
+    "id": 17,
+    "slug": "sthame-collection-single-pack-studio",
+    "name": {
+      "ar": "طقم فوط سفرة ومطبخ قطنية بتطريز القهوة (عبوة مفردة)",
+      "en": "Coffee Motif Waffle Weave Kitchen Towel Set (Single Pack)"
+    },
+    "description": {
+      "ar": "باكيت فوط مطبخ قطنية 3 قطع بتصميم وافل ثلاثي الأبعاد وكنار جاكار بنقشة القهوة العربية.",
+      "en": "Single retail pack of 3 textured waffle-weave kitchen towels featuring an embossed coffee cup and pot jacquard border."
+    },
+    "longDescription": {
+      "ar": "عبوة مفردة جاهزة للعرض في المتاجر تضم 3 فوط قطنية بألوان مبهجة وملمس وافل يساعد على التجفيف السريع وامتصاص السوائل بكفاءة عالية دون تركوبر.",
+      "en": "Retail-ready single pack containing three multi-colored cotton kitchen towels with a quick-drying 3D waffle weave and lint-free absorbency."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 22,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-08.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي",
+        "عدد القطع": "3 فوط متناسقة",
+        "المقاس": "40 × 60 سم",
+        "الاستخدام": "المطابخ والضيافة"
+      },
+      "en": {
+        "Material": "100% Natural Cotton",
+        "Pieces": "3 Coordinated Towels",
+        "Size": "40 x 60 cm",
+        "Application": "Kitchen & Hospitality"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:37:35.710Z"
+  },
+  {
+    "id": 18,
+    "slug": "riccione-fuchsia-pink-velour-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ قطيفة فوشيا سادة بشريط (RICCIONE)",
+      "en": "Riccione Fuchsia Pink Velour Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة شاطئ فاخرة باللون الفوشيا الزاهي مع شريط طولي بارز يحمل كلمة RICCIONE باللون الأبيض.",
+      "en": "Vibrant fuchsia pink velour cotton beach towel featuring a bold central band with white RICCIONE lettering."
+    },
+    "longDescription": {
+      "ar": "منشفة بحر وحمام سباحة بتصميم إيطالي عصري باللون الفوشيا المشرق، منسوجة من القطن الوبري الكثيف ومزودة بشريط وسطي عريض منسوج بحروف بيضاء واضحة تحافظ على رونقها بعد الغسيل المتكرر.",
+      "en": "Italian-inspired resort beach towel in vibrant hot pink fuchsia, crafted from thick velour terry cotton with a central vertical band showcasing bold white RICCIONE typography."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 23,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-09.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن قطيفة (Velour)",
+        "الوزن": "480 جم/م²",
+        "المقاس": "85 × 165 سم",
+        "اللون": "فوشيا × أبيض"
+      },
+      "en": {
+        "Material": "100% Velour Terry Cotton",
+        "Weight": "480 GSM",
+        "Size": "85 x 165 cm",
+        "Color": "Fuchsia Pink & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:36:35.710Z"
+  },
+  {
+    "id": 19,
+    "slug": "kirschtein-maritime-crest-gradient-towel",
+    "name": {
+      "ar": "منشفة بحر متدرجة اللون بشعار بحري كلاسيكي (KIRSCHTEIN)",
+      "en": "Kirschtein Maritime Emblem Blue Gradient Towel"
+    },
+    "description": {
+      "ar": "منشفة قطيفة بتدرج لوني من الأزرق السماوي إلى الكحلي الداكن مع شعار بحري ملكي أبيض في المنتصف.",
+      "en": "Gradient blue-to-navy terry beach towel adorned with a classic white maritime crest, ship wheel, and dolphins."
+    },
+    "longDescription": {
+      "ar": "منشفة استثنائية تجمع بين التدرج اللوني الأنيق من الأزرق الفاتح إلى الكحلي العميق مع شعار بحري كلاسيكي يضم دفة السفينة، مجدافين متقاطعين، ودولفينين على الجانبين بملمس وبري ناعم.",
+      "en": "Distinguished beach towel blending a smooth sky-blue to deep-navy gradient with an intricate white maritime emblem featuring crossed oars, a ship wheel, and leaping dolphins."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 24,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-10.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري فاخر",
+        "الوزن": "460 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "تدرج أزرق سماوي وكحلي"
+      },
+      "en": {
+        "Material": "100% Luxury Terry Cotton",
+        "Weight": "460 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Sky Blue to Navy Gradient"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:35:35.710Z"
+  },
+  {
+    "id": 20,
+    "slug": "enjoy-your-life-sun-warm-tones-towel",
+    "name": {
+      "ar": "منشفة شاطئ صيفية بألوان دافئة (Enjoy Your Life)",
+      "en": "Enjoy Your Life Sunburst Warm-Tone Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة شاطئ مبهجة بمزيج الألوان الدافئة (برتقالي، أحمر، أصفر، فوشيا) مع رسمة الشمس وعبارة Enjoy Your Life.",
+      "en": "Energetic summer beach towel combining warm orange, red, yellow, and magenta panels with sun motifs and Enjoy Your Life text."
+    },
+    "longDescription": {
+      "ar": "منشفة صيفية نابضة بالحياة تضفي أجواء الإشراق على الشواطئ وحمامات السباحة، مصممة بتقسيمات طولية تجمع بين البرتقالي والفوشيا والأصفر مع حواف مزينة بشموس صغيرة متكررة.",
+      "en": "Vibrant summer beach towel radiating warmth with split vertical panels in orange, magenta, and yellow, accented by a glowing sun emblem and repeating sun-patterned borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 25,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-11.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "440 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "الألوان": "برتقالي × فوشيا × أصفر × أحمر"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "440 GSM",
+        "Size": "80 x 160 cm",
+        "Colors": "Orange, Magenta, Yellow, Red"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:34:35.710Z"
+  },
+  {
+    "id": 21,
+    "slug": "aqua-palm-surfboard-tropical-towel-set",
+    "name": {
+      "ar": "مجموعة مناشف شاطئ فيروزي بنقشة النخيل ولوح التزلج",
+      "en": "Aqua Tropical Palm & Surfboard Beach Towel Collection"
+    },
+    "description": {
+      "ar": "مناشف بحر باللون الفيروزي المنعش مع رسومات أشجار النخيل ولوح ركوب الأمواج باللون الكحلي الداكن.",
+      "en": "Refreshing cyan-aqua beach towels featuring dark navy palm trees, tropical monstera leaves, and a patterned surfboard."
+    },
+    "longDescription": {
+      "ar": "تصميم استوائي مميز يجمع بين الأرضية الفيروزية المشرقة والرسومات الكحلية الدقيقة لأشجار النخيل وأوراق المونستيرا ولوح التزلج على الماء، مصنوعة من قطن كثيف يتحمل الشمس والغسيل المستمر.",
+      "en": "Tropical beach towel showcasing dark navy palm trees, surfboard art, and lush foliage against a bright aqua-cyan cotton terry background."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 26,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-12.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن معالج ضد بهتان الألوان",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "فيروزي × كحلي"
+      },
+      "en": {
+        "Material": "100% Colorfast Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Aqua Cyan & Dark Navy"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:33:35.710Z"
+  },
+  {
+    "id": 22,
+    "slug": "mariner-compass-rose-captain-navy-towel",
+    "name": {
+      "ar": "منشفة شاطئ كحلي بنقشة البوصلة البحرية وقبعة القبطان",
+      "en": "Mariner Compass Rose & Captain Hat Navy Towel"
+    },
+    "description": {
+      "ar": "منشفة بحرية باللون الكحلي والأبيض تتوسطها بوصلة ملاحية كبيرة وقبعة القبطان ومراكب شراعية.",
+      "en": "Navy and white maritime beach towel centered with an ornate compass rose, captain hat, sailboats, and anchors."
+    },
+    "longDescription": {
+      "ar": "منشفة قطنية فاخرة مستوحاة من عالم الملاحة البحرية، تتميز بنقشة بوصلة كبيرة متقنة التفاصيل يعلوها كاب القبطان وتحيط بها المراكب الشراعية والمراسي مع أربعة خطوط بيضاء كلاسيكية على الأطراف.",
+      "en": "Nautical cotton terry towel inspired by classic seafaring, detailed with an elaborate white compass rose, mariner cap, sailboats, whale, and four-stripe borders on deep navy."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 27,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-13.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري ثقيل",
+        "الوزن": "460 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "كحلي × أبيض"
+      },
+      "en": {
+        "Material": "100% Heavy Terry Cotton",
+        "Weight": "460 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Navy Blue & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:32:35.710Z"
+  },
+  {
+    "id": 23,
+    "slug": "yachting-club-sailing-route-ocean-cruise-towel",
+    "name": {
+      "ar": "منشفة نادي اليخوت البحرية (Yachting Club - Ocean Cruise)",
+      "en": "Yachting Club Sailing Route Dark Navy Towel"
+    },
+    "description": {
+      "ar": "منشفة كحلي داكن بتصميم نادي اليخوت والرحلات البحرية مع مرساة كبيرة وحواف مزخرفة بدفة السفينة.",
+      "en": "Dark navy yacht club towel featuring medium-blue anchor crest, Sailing Route & Ocean Cruise lettering, and helm borders."
+    },
+    "longDescription": {
+      "ar": "مصممة خصيصاً للفنادق الساحلية والنوادي البحرية، تجمع بين اللون الكحلي الفخم والدرجة الزرقاء الهادئة في شعار YACHTING CLUB CHALLENGE مع إطار علوي وسفلي غني بالرموز الملاحية.",
+      "en": "Tailored for coastal hotels and yacht clubs, pairing deep navy cotton terry with medium-blue Yachting Club Challenge anchor emblems and repeating maritime borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 28,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-14.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن جاكار منسوج",
+        "الوزن": "470 جم/م²",
+        "المقاس": "85 × 165 سم",
+        "اللون": "كحلي داكن × أزرق بحري"
+      },
+      "en": {
+        "Material": "100% Woven Jacquard Cotton",
+        "Weight": "470 GSM",
+        "Size": "85 x 165 cm",
+        "Color": "Dark Navy & Medium Blue"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:31:35.710Z"
+  },
+  {
+    "id": 24,
+    "slug": "starfish-coral-seashell-navy-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ كحلي بنقشة نجوم البحر والشعاب المرجانية",
+      "en": "Starfish, Coral & Seashell Navy Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الكحلي والأبيض مزينة برسومات نجوم البحر المنقطة والشعاب المرجانية والأصداف.",
+      "en": "Navy blue and white cotton beach towel illustrated with dotted starfish, coral branches, conch, and scallop shells."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ أنيقة مستوحاة من أعماق البحر الأحمر والمتوسط، تعرض تفاصيل دقيقة لنجوم البحر والقواقع والشعاب المرجانية باللون الأبيض الناصع على خلفية كحلية عالية الكثافة.",
+      "en": "Oceanic cotton beach towel inspired by marine life, showcasing crisp white dotted starfish, coral reefs, and seashells framed by a repeating shell border on navy terry."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 29,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-15.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري ناعم",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "كحلي × أبيض"
+      },
+      "en": {
+        "Material": "100% Soft Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Navy Blue & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:30:35.710Z"
+  },
+  {
+    "id": 25,
+    "slug": "maritime-signal-flags-red-wheel-black-towel",
+    "name": {
+      "ar": "منشفة بحرية سوداء بنقشة الأعلام الملاحية والدفة الحمراء",
+      "en": "Maritime Signal Flags & Red Ship Wheel Black Towel"
+    },
+    "description": {
+      "ar": "منشفة شاطئ سوداء فاخرة تتوسطها سلسلة ودفة سفينة حمراء مع أعلام الإشارات البحرية الملونة.",
+      "en": "Striking black beach towel featuring a red ship wheel, vertical chain, colorful maritime signal flags, and rope borders."
+    },
+    "longDescription": {
+      "ar": "تصميم جريء وفريد على أرضية سوداء داكنة يبرز فيه اللون الأحمر والرمادي الفاتح من خلال دفة القيادة البحرية والسلسلة الطولية وأعلام الملاحة، مع إطار مجدول على شكل حبال السفن.",
+      "en": "Bold nautical statement towel on a jet-black terry base, highlighting a vibrant red ship helm, central chain, maritime signal flags, and twisted rope framing."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 30,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-16.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن قطيفة كثيف",
+        "الوزن": "460 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أسود × أحمر × رمادي فاتح"
+      },
+      "en": {
+        "Material": "100% Dense Velour Cotton",
+        "Weight": "460 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Black / Red / Light Grey"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:29:35.710Z"
+  },
+  {
+    "id": 26,
+    "slug": "mr-palm-silhouette-turquoise-gradient-towel",
+    "name": {
+      "ar": "منشفة شاطئ متدرجة بنقشة ظلال النخيل وتوقيع (Mr.)",
+      "en": "Mr. Palm Silhouette Turquoise Gradient Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية بتدرج الأزرق والفيروزي مع ظلال أشجار النخيل السوداء على الأطراف وكلمة Mr. العصرية.",
+      "en": "Turquoise-to-blue gradient cotton beach towel bordered by black palm tree silhouettes and bold Mr. script."
+    },
+    "longDescription": {
+      "ar": "منشفة شبابية عصرية تتميز بإشراقة اللون الفيروزي المتدرج في المنتصف نحو الأزرق الداكن عند الأطراف، مع صفوف من أشجار النخيل الاستوائية باللون الأسود وتصميم نصي أنيق في القلب.",
+      "en": "Contemporary resort towel with a luminous turquoise center fading into deep blue edges, framed by black palm tree silhouettes and modern handwritten Mr. typography."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 31,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-17.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "440 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "فيروزي متدرج × أسود"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "440 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Turquoise Blue Gradient & Black"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:28:35.710Z"
+  },
+  {
+    "id": 27,
+    "slug": "dolphin-bubbles-dark-teal-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ بترولي بنقشة الدولفين والفقاعات البحرية",
+      "en": "Playful Dolphin & Bubbles Dark Teal Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة بحر باللون البترولي الغني مزينة برسمة دولفين كبير وفقاعات مائية وشريط أمواج ودلافين.",
+      "en": "Rich dark teal cotton beach towel featuring a swimming dolphin outline, water bubbles, and leaping dolphin wave borders."
+    },
+    "longDescription": {
+      "ar": "منشفة قطنية ناعمة ومريحة للبشرة باللون البترولي (التيل الداكن) مع خطوط كحلية ترسم دولفيناً يسبح وسط الفقاعات، وحواف علوية وسفلية مزينة بدلافين تقفز فوق الأمواج.",
+      "en": "Skin-friendly plush cotton towel in deep teal featuring a playful navy dolphin illustration surrounded by bubbles and bordered by repeating leaping dolphins."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 32,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-18.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "بترولي (تيل) × كحلي"
+      },
+      "en": {
+        "Material": "100% Natural Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Dark Teal & Navy Blue"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:27:35.710Z"
+  },
+  {
+    "id": 28,
+    "slug": "rearing-stallion-horse-red-black-towel",
+    "name": {
+      "ar": "منشفة شاطئ ورياضة حمراء بنقشة الحصان الجامح الأسود",
+      "en": "Rearing Black Stallion Red Cotton Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطيفة باللون الأحمر الزاهي يتوسطها حصان أسود جامح مع شريط سفلي بنقشة المربعات الرياضية.",
+      "en": "Vibrant red cotton terry towel showcasing a bold black rearing horse silhouette and a black-and-white checkerboard border."
+    },
+    "longDescription": {
+      "ar": "منشفة قوية الشخصية تجمع بين فخامة اللون الأحمر الناري وحيوية الخيل العربي الجامح باللون الأسود، مع كنار سفلي بنقشة شطرنجية رياضية باللونين الأبيض والأسود.",
+      "en": "Dynamic athletic and beach towel combining a fiery red looped terry base with a striking black rearing stallion silhouette and a classic racing checkerboard hem."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 33,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-19.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن قطيفة",
+        "الوزن": "460 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أحمر × أسود × أبيض"
+      },
+      "en": {
+        "Material": "100% Velour Terry Cotton",
+        "Weight": "460 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Red / Black / White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:26:35.710Z"
+  },
+  {
+    "id": 29,
+    "slug": "yin-yang-gecko-cyan-black-towel-set",
+    "name": {
+      "ar": "مجموعة مناشف شاطئ بتصميم الين واليانغ (Yin-Yang Gecko)",
+      "en": "Yin-Yang Gecko Dual-Tone Cyan & Black Towel Set"
+    },
+    "description": {
+      "ar": "مناشف قطنية بتصميم فني متقابل باللونين الفيروزي والأسود مستوحى من رمز التوازن (Yin-Yang).",
+      "en": "Artistic dual-tone cyan and black cotton beach towels divided in an S-curve Yin-Yang motif with contrasting gecko graphics."
+    },
+    "longDescription": {
+      "ar": "تصميم عصري غير تقليدي يقسم المنشفة بانحناءة انسيابية بين الأسود والفيروزي مع رسومات متقابلة وشريط علوي وسفلي مزخرف بدقة عالية، مثالي للشواطئ الشبابية والمنتجعات الحديثة.",
+      "en": "Distinctive modern beach towel split in a flowing S-curve between aqua cyan and jet black, complete with contrasting Yin-Yang symbols and fine decorative borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 34,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-20.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "فيروزي × أسود"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Cyan Aqua & Black"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:25:35.710Z"
+  },
+  {
+    "id": 30,
+    "slug": "baci-abbracci-navy-cyan-apple-towel",
+    "name": {
+      "ar": "منشفة شاطئ كحلي وفيروزي بتصميم (Baci & Abbracci)",
+      "en": "Baci & Abbracci Navy & Turquoise Cotton Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة بحر إيطالية الطابع باللون الكحلي الداكن مع شعار التفاحة الفيروزي وعبارة BACI & ABBRACCI.",
+      "en": "Italian-style dark navy beach towel featuring a turquoise stylized apple emblem and bold BACI & ABBRACCI branding."
+    },
+    "longDescription": {
+      "ar": "منشفة قطنية أنيقة بتباين لوني جذاب بين الكحلي الداكن والتركواز المشرق، منسوجة بخيوط قطنية مزدوجة تضمن بقاء الرسمة والكتابة واضحة وناعمة الملمس.",
+      "en": "Sophisticated contrast between deep navy blue and bright turquoise in a double-looped cotton terry towel featuring modern Italian emblem styling."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 15,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-21.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن مزدوج الوبرة",
+        "الوزن": "460 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "كحلي × فيروزي"
+      },
+      "en": {
+        "Material": "100% Double-Loop Terry Cotton",
+        "Weight": "460 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Navy Blue & Turquoise"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:24:35.710Z"
+  },
+  {
+    "id": 31,
+    "slug": "aloha-surf-shack-grey-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ رمادية بنقشة ألواح التزلج وبيت الأمواج (Aloha Surf)",
+      "en": "Aloha Surfboards & Surf Shack Grey Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الرمادي العصري مزينة برسومات ألواح ركوب الأمواج السوداء وزهور الهيبسكس الاستوائية.",
+      "en": "Modern grey cotton beach towel featuring black surfboards, an Aloha surf shack illustration, and hibiscus floral borders."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ هادئة وأنيقة باللون الرمادي مع تفاصيل سوداء وصفراء تشمل كشك الشاطئ وألواح ركوب الأمواج المزخرفة وحواف علوية وسفلية بنقشة الزهور الاستوائية.",
+      "en": "Understated coastal grey beach towel accented with black surfboard illustrations, a sunset wave emblem, yellow pin-stripes, and dark hibiscus borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 16,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-22.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "رمادي × أسود × أصفر"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Grey / Black / Yellow"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:23:35.710Z"
+  },
+  {
+    "id": 32,
+    "slug": "cactus-succulent-hug-me-red-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ حمراء بنقشة الصبار الزخرفية (Cactus Hug Me)",
+      "en": "Cactus & Succulent Hug Me Crimson Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الأحمر الداكن مع رسومات نباتات الصبار البرتقالية وحواف زرقاء مزخرفة بنقشة البايزلي.",
+      "en": "Dark crimson cotton beach towel illustrated with playful orange cactus pots, Hug Me speech bubble, and blue paisley borders."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ مرحة ومميزة تجمع بين اللون الأحمر الدافئ ورسومات الصبار والنباتات العصارية باللون البرتقالي مع شريط أزرق عريض عند الأطراف يمنحها مظهراً حيوياً متكاملاً.",
+      "en": "Playful and warm crimson terry towel combining terracotta-orange cactus illustrations and polka-dot accents with wide royal-blue paisley end borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 17,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-23.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي",
+        "الوزن": "440 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أحمر داكن × برتقالي × أزرق"
+      },
+      "en": {
+        "Material": "100% Natural Cotton",
+        "Weight": "440 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Dark Red / Orange / Blue"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:22:35.710Z"
+  },
+  {
+    "id": 33,
+    "slug": "rimini-orange-yellow-beach-towel-duo",
+    "name": {
+      "ar": "طقم مناشف شاطئ صيفية (RIMINI) باللونين البرتقالي والأصفر",
+      "en": "Rimini Vibrant Orange & Yellow Beach Towel Duo"
+    },
+    "description": {
+      "ar": "مجموعتان من مناشف الشاطئ الفاخرة باللون البرتقالي الزاهي والأصفر المشرق مع شريط RIMINI الأبيض.",
+      "en": "Pair of vibrant solid-color velour beach towel stacks in sunny yellow and bright orange with bold white RIMINI bands."
+    },
+    "longDescription": {
+      "ar": "ثنائي صيفي مبهج للمنتجعات والفنادق الساحلية، مصنوع من القطن الكثيف بألوان صريحة وثابتة ضد الشمس والكلور مع شريط وسطي يحمل اسم RIMINI بحروف بيضاء بارزة.",
+      "en": "Sun-drenched resort towel collection in chlorine- and UV-resistant bright orange and yellow terry cotton, finished with bold white RIMINI center bands."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 18,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-24.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن قطيفة مقاوم للكلور",
+        "الوزن": "480 جم/م²",
+        "المقاس": "85 × 165 سم",
+        "الألوان": "برتقالي زاهي / أصفر مشرق"
+      },
+      "en": {
+        "Material": "100% Chlorine-Resistant Velour Cotton",
+        "Weight": "480 GSM",
+        "Size": "85 x 165 cm",
+        "Colors": "Vibrant Orange & Bright Yellow"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:21:35.711Z"
+  },
+  {
+    "id": 34,
+    "slug": "beach-addict-turquoise-grid-towel",
+    "name": {
+      "ar": "منشفة شاطئ فيروزي بنقشة المربعات الصيفية (Beach Addict)",
+      "en": "Beach Addict Turquoise Summer Grid Cotton Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الفيروزي مقسمة إلى مربعات مرسومة باللون الأبيض تضم نجوم البحر والقواقع وأجواء الشاطئ.",
+      "en": "Turquoise cotton beach towel featuring a 2x4 white-illustrated summer grid of starfish, seashells, flip-flops, and palm borders."
+    },
+    "longDescription": {
+      "ar": "منشفة صيفية عصرية تجمع 8 رسومات شاطئية مبهجة داخل مربعات بيضاء على أرضية فيروزية منعشة، مع شريط علوي وسفلي مزين بظلال أشجار النخيل وكراسي البحر.",
+      "en": "Fresh turquoise terry towel showcasing eight beach-life illustrations in crisp white grid panels, completed by palm tree and beach umbrella silhouette borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 19,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-25.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري ناعم",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "فيروزي × أبيض × أسود"
+      },
+      "en": {
+        "Material": "100% Soft Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Turquoise / White / Black"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:20:35.711Z"
+  },
+  {
+    "id": 35,
+    "slug": "sea-turtles-swirl-medium-blue-towel",
+    "name": {
+      "ar": "منشفة بحر زرقاء بنقشة السلاحف البحرية والأمواج اللولبية",
+      "en": "Sea Turtles & Ocean Swirls Medium Blue Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الأزرق البحري المتوسط مزينة بسلحفتين بحريتين كبيرتين بنقوش زخرفية كحلية.",
+      "en": "Medium blue cotton terry towel adorned with two ornate navy sea turtles, starfish, seashells, and swirling wave borders."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ مستوحاة من الحياة البحرية الهادئة، تتميز بدرجة لون أزرق مريحة للعين مع نقوش سلاحف بحرية غنية بالتفاصيل اللولبية ونجوم البحر على نسيج قطني سميك.",
+      "en": "Marine-inspired beach towel in soothing medium blue, richly patterned with two intricately swirled navy sea turtles, scattered starfish, and wave borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 20,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-26.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أزرق بحري × كحلي"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Medium Blue & Dark Navy"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:19:35.711Z"
+  },
+  {
+    "id": 36,
+    "slug": "turquoise-flip-flops-blue-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ زرقاء بنقشة الصنادل الصيفية المنقطة",
+      "en": "Turquoise Dotted Flip-Flops Blue Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة بحر باللون الأزرق الزاهي مزينة بصف من الصنادل الشاطئية المنقطة باللون الفيروزي وحواف مقلمة.",
+      "en": "Vibrant blue beach towel featuring a vertical row of turquoise outlined and polka-dotted flip-flop sandals."
+    },
+    "longDescription": {
+      "ar": "تصميم شاطئي مرح يجمع بين درجات الأزرق والتركواز والأخضر المائي في نسيج قطني عالي الامتصاص، مثالي للاستخدام اليومي على الشاطئ وحول حمامات السباحة.",
+      "en": "Playful poolside and beach towel pairing a bright blue cotton terry body with cyan polka-dotted flip-flop graphics and striped geometric borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 21,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-27.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي",
+        "الوزن": "440 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أزرق × فيروزي"
+      },
+      "en": {
+        "Material": "100% Natural Cotton",
+        "Weight": "440 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Vibrant Blue & Turquoise"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:18:35.711Z"
+  },
+  {
+    "id": 37,
+    "slug": "white-sea-turtles-black-luxury-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ سوداء فاخرة بنقشة السلاحف البحرية البيضاء",
+      "en": "Ornate White Sea Turtles on Black Luxury Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطيفة باللون الأسود الملكي مع رسومات سلاحف بحرية ونجوم بحر بيضاء وإطار مرجاني أنيق.",
+      "en": "Jet-black luxury cotton beach towel contrasting with intricately patterned white sea turtles, starfish, and coral borders."
+    },
+    "longDescription": {
+      "ar": "تباين كلاسيكي فخم بين الأسود العميق والأبيض الناصع، يبرز الزخارف الدقيقة على دروع السلاحف البحرية ونجوم البحر المنقطة مع شريط علوي وسفلي أبيض مزين بالشعاب المرجانية.",
+      "en": "High-contrast monochrome beach towel on plush black cotton terry, showcasing finely detailed white sea turtles, dotted starfish, and white coral band borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 22,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-28.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن قطيفة فاخر",
+        "الوزن": "470 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أسود × أبيض"
+      },
+      "en": {
+        "Material": "100% Luxury Velour Cotton",
+        "Weight": "470 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Black & White"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:17:35.711Z"
+  },
+  {
+    "id": 38,
+    "slug": "golden-mandala-sunburst-yellow-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ صفراء بنقشة الماندالا الشرقية الدافئة",
+      "en": "Golden Mandala Sunburst Yellow & Orange Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الأصفر الذهبي مزينة بزخارف الماندالا البرتقالية الدافئة وإطار أحمر مزخرف.",
+      "en": "Vibrant golden-yellow cotton beach towel adorned with large intricate orange mandalas and red sunburst borders."
+    },
+    "longDescription": {
+      "ar": "منشفة شاطئ مستوحاة من الزخارف الهندسية والماندالا الشرقية بتدرجات الأصفر الذهبي والبرتقالي والأحمر، تمنح مظهراً دافئاً ومميزاً مع نعومة فائقة للقطن الطبيعي.",
+      "en": "Bohemian-inspired beach towel featuring oversized intricate mandalas in rich orange against a sunny yellow terry base with red decorative end bands."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 23,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-29.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن وبري",
+        "الوزن": "450 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أصفر ذهبي × برتقالي × أحمر"
+      },
+      "en": {
+        "Material": "100% Terry Cotton",
+        "Weight": "450 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Golden Yellow / Orange / Red"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:16:35.711Z"
+  },
+  {
+    "id": 39,
+    "slug": "sugar-seahorse-lime-green-beach-towel",
+    "name": {
+      "ar": "منشفة شاطئ خضراء فستقية بنقشة فرس البحر (SUGAR)",
+      "en": "Sugar Seahorse Lime Green & Black Cotton Beach Towel"
+    },
+    "description": {
+      "ar": "منشفة قطنية باللون الأخضر الفستقي الزاهي مع كلمة SUGAR بالأسود وشريط حدودي مرسوم بفرس البحر.",
+      "en": "Vibrant lime-green cotton beach towel featuring bold black SUGAR script and repeating seahorse border bands."
+    },
+    "longDescription": {
+      "ar": "تصميم عصري لافت للأنظار باللون الأخضر العشبي المشرق مع تباين أسود قوي في الكتابة اليدوية العريضة وحواف المنشفة المزينة برسومات فرس البحر الصغير المتكررة.",
+      "en": "Eye-catching lime green terry towel contrasted with bold black handwritten SUGAR lettering, a corner seahorse emblem, and repeating seahorse borders."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 24,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-30.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن طبيعي",
+        "الوزن": "440 جم/م²",
+        "المقاس": "80 × 160 سم",
+        "اللون": "أخضر فستقي × أسود"
+      },
+      "en": {
+        "Material": "100% Natural Cotton",
+        "Weight": "440 GSM",
+        "Size": "80 x 160 cm",
+        "Color": "Lime Green & Black"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": false,
+    "createdAt": "2026-10-31T19:15:35.711Z"
+  },
+  {
+    "id": 40,
+    "slug": "hexagon-jacquard-border-7-color-hotel-towel-collection",
+    "name": {
+      "ar": "مجموعة مناشف فندقية سادة بكنار جاكار سداسي (7 ألوان)",
+      "en": "Hexagon Jacquard Border 7-Color Hotel Bath Towel Collection"
+    },
+    "description": {
+      "ar": "تشكيلة كاملة من المناشف الفندقية الفاخرة بـ 7 ألوان راقية مع شريط مطرز هندسي سداسي (خلية النحل).",
+      "en": "Complete 7-color luxury hotel bath towel collection featuring a woven hexagon honeycomb jacquard border."
+    },
+    "longDescription": {
+      "ar": "المجموعة الفندقية المتكاملة من مصنع النهضة، تضم 7 ألوان فاخرة (مرجاني، كحلي، أخضر، بني، أبيض ناصع، بيج كريمي، ورمادي فاتح) منسوجة من القطن المصري الفاخر 100% مع كنار جاكار هندسي سداسي الأضلاع يجمع بين الفخامة وقوة التحمل.",
+      "en": "Al-Nahda Factory signature 7-color hotel and spa bath towel collection (Coral, Navy, Green, Brown, White, Cream Beige, Light Grey) woven from 100% premium cotton with an elegant hexagon jacquard border."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 25,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-31.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن فندقي فاخر",
+        "الوزن": "550 جم/م²",
+        "المقاس": "70 × 140 سم / 90 × 150 سم",
+        "الألوان": "7 ألوان فندقية متكاملة"
+      },
+      "en": {
+        "Material": "100% Luxury Hotel Cotton",
+        "Weight": "550 GSM",
+        "Size": "70 x 140 cm / 90 x 150 cm",
+        "Colors": "7 Signature Hotel Colors"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:14:35.711Z"
+  },
+  {
+    "id": 41,
+    "slug": "coral-terracotta-hexagon-jacquard-bath-towel",
+    "name": {
+      "ar": "طقم مناشف حمام فندقية بلون مرجاني وكنار جاكار سداسي",
+      "en": "Coral Terracotta Hexagon Jacquard Hotel Bath Towel Set"
+    },
+    "description": {
+      "ar": "طقم مناشف حمام قطنية فائقة النعومة باللون المرجاني الدافئ مع كنار مطرز بنقشة هندسية سداسية.",
+      "en": "Ultra-plush coral terracotta cotton bath towel stack finished with a woven hexagon jacquard border."
+    },
+    "longDescription": {
+      "ar": "منشفة حمام فندقية عالية الكثافة والامتصاص باللون المرجاني الجذاب، مصنعة من خيوط القطن الممشط الطويل التيلة مع شريط جاكار هندسي يمنحها ثباتاً في الشكل ومظهراً راقياً في الفنادق والمنازل الفاخرة.",
+      "en": "High-density combed cotton hotel bath towel in warm coral terracotta, showcasing superior loop softness and a refined geometric hexagon jacquard band."
+    },
+    "category": {
+      "ar": "أقمشة القطن",
+      "en": "Cotton Fabrics"
+    },
+    "categoryId": "cotton",
+    "availability": {
+      "ar": "متوفر",
+      "en": "Available"
+    },
+    "rating": 4.9,
+    "reviews": 26,
+    "price": "حسب الكمية والمواصفات",
+    "images": [
+      "/uploads/gemini-product-32.jpg"
+    ],
+    "specifications": {
+      "ar": {
+        "الخامة": "100% قطن ممشط طويل التيلة",
+        "الوزن": "550 جم/م²",
+        "المقاس": "70 × 140 سم",
+        "اللون": "مرجاني (Coral Terracotta)"
+      },
+      "en": {
+        "Material": "100% Combed Long-Staple Cotton",
+        "Weight": "550 GSM",
+        "Size": "70 x 140 cm",
+        "Color": "Coral Terracotta"
+      }
+    },
+    "features": {
+      "ar": [
+        "100% قطن طبيعي عالي الامتصاص",
+        "ألوان ثابتة مقاومة للغسيل والشمس",
+        "ملمس وبري ناعم ومريح للبشرة",
+        "تصنيع وتوريد بالجملة حسب الطلب"
+      ],
+      "en": [
+        "100% High-Absorbency Natural Cotton",
+        "Colorfast & UV/Wash Resistant",
+        "Soft Plush Looped Terry Texture",
+        "Custom Wholesale Manufacturing"
+      ]
+    },
+    "applications": {
+      "ar": [
+        "المنتجعات والفنادق السياحية",
+        "الشواطئ وحمامات السباحة",
+        "التجارة والتوزيع بالجملة"
+      ],
+      "en": [
+        "Hotels & Tourist Resorts",
+        "Beaches & Swimming Pools",
+        "Wholesale Retail & Distribution"
+      ]
+    },
+    "featured": true,
+    "createdAt": "2026-10-31T19:13:35.711Z"
+  },
+  {
     "id": 1,
     "slug": "luxury-white-cotton",
     "name": {

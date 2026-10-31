@@ -11,11 +11,13 @@ const runtimeDataDir = isVercel
   ? path.join(os.tmpdir(), 'alnahda-data')
   : bundledDataDir;
 
+const BLOB_PREFIX = 'data/v2';
+
 export async function readStoreFile<T>(fileName: string, fallback: T): Promise<T> {
   // 1. Read from Vercel Blob first if configured (shared across all Serverless containers)
   if (hasBlob) {
     try {
-      const result = await get(`data/${fileName}`, {
+      const result = await get(`${BLOB_PREFIX}/${fileName}`, {
         access: 'private',
         useCache: false,
       });
@@ -43,7 +45,7 @@ export async function readStoreFile<T>(fileName: string, fallback: T): Promise<T
       // Seed into Vercel Blob on first read if Blob is active
       if (hasBlob) {
         try {
-          await put(`data/${fileName}`, content, {
+          await put(`${BLOB_PREFIX}/${fileName}`, content, {
             access: 'private',
             contentType: 'application/json',
             addRandomSuffix: false,
@@ -69,7 +71,7 @@ export async function writeStoreFile<T>(fileName: string, data: T): Promise<bool
   // 1. Write to Vercel Blob so all Serverless containers see the update immediately
   if (hasBlob) {
     try {
-      await put(`data/${fileName}`, jsonContent, {
+      await put(`${BLOB_PREFIX}/${fileName}`, jsonContent, {
         access: 'private',
         contentType: 'application/json',
         addRandomSuffix: false,
